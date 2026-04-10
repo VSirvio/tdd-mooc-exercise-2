@@ -17,6 +17,10 @@ export class Board {
   }
 
   toString() {
-    return "...\n...\n...\n";
+    let result = '';
+    for (const row of this.gameArea) {
+      result += row.join('') + "\n";
+    }
+    return result;
   }
 }
