@@ -2,6 +2,7 @@ export class Board {
   width;
   height;
   gameArea;
+  currentBlockLocation;
 
   constructor(width, height) {
     this.width = width;
@@ -20,7 +21,12 @@ export class Board {
     let result = '';
     for (let y = 0; y < this.height; ++y) {
       for (let x = 0; x < this.width; ++x) {
-        result += this.gameArea[y][x];
+        if (this.currentBlockLocation && x === this.currentBlockLocation[0] &&
+            y === this.currentBlockLocation[1]) {
+          result += 'X';
+        } else {
+          result += '.';
+        }
       }
       result += "\n";
     }
@@ -28,6 +34,6 @@ export class Board {
   }
 
   drop(block) {
-    this.gameArea[0][1] = block;
+    this.currentBlockLocation = [1, 0];
   }
 }
