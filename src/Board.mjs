@@ -18,8 +18,11 @@ export class Board {
 
   toString() {
     let result = '';
-    for (const row of this.gameArea) {
-      result += row.join('') + "\n";
+    for (let y = 0; y < this.height; ++y) {
+      for (let x = 0; x < this.width; ++x) {
+        result += this.gameArea[y][x];
+      }
+      result += "\n";
     }
     return result;
   }
