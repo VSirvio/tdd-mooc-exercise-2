@@ -27,4 +27,10 @@ export class Board {
   drop(block) {
     this.currentBlockLocation = [1, 0];
   }
+
+  tick() {
+    if (this.currentBlockLocation) {
+      this.currentBlockLocation[1] += 1;
+    }
+  }
 }
