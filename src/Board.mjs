@@ -23,4 +23,8 @@ export class Board {
     }
     return result;
   }
+
+  drop(block) {
+    this.gameArea[0][1] = block;
+  }
 }
