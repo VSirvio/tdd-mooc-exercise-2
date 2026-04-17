@@ -1,10 +1,14 @@
 export class Tetromino {
-  static T_SHAPE = new Tetromino();
+  static T_SHAPE = new Tetromino([
+    '.T.',
+    'TTT',
+    '...',
+  ]);
 
   characters;
 
-  constructor () {
-    this.characters = ['.T.', 'TTT', '...'];
+  constructor (initCharacters) {
+    this.characters = [...initCharacters];
   }
 
   toString() {
