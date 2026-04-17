@@ -18,4 +18,8 @@ export class Tetromino {
   rotateRight() {
     return new Tetromino(['.T.', '.TT', '.T.'])
   }
+
+  rotateLeft() {
+    return new Tetromino(['.T.', 'TT.', '.T.'])
+  }
 }
