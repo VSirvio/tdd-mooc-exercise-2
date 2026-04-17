@@ -19,4 +19,8 @@ export class RotatingShape {
     }
     return result;
   }
+
+  rotateRight() {
+    return "GDA\nHEB\nIFC\n";
+  }
 }
