@@ -16,7 +16,11 @@ export class Tetromino {
   );
 
   static fromString(initString) {
-    return new Tetromino([RotatingShape.fromString(initString)]);
+    const rotatingShapes = [RotatingShape.fromString(initString)];
+    for (let i = 0; i < 3; ++i) {
+      rotatingShapes.push(RotatingShape.fromString(rotatingShapes.at(-1).rotateRight()));
+    }
+    return new Tetromino(rotatingShapes);
   }
 
   rotatingShapes;
@@ -30,10 +34,10 @@ export class Tetromino {
   }
 
   rotateRight() {
-    return Tetromino.fromString(this.rotatingShapes[0].rotateRight());
+    return new Tetromino([...this.rotatingShapes.slice(1), this.rotatingShapes[0]]);
   }
 
   rotateLeft() {
-    return Tetromino.fromString(this.rotatingShapes[0].rotateLeft());
+    return new Tetromino([this.rotatingShapes.at(-1), ...this.rotatingShapes.slice(0, -1)]);
   }
 }
