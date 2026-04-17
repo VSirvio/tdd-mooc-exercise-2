@@ -3,6 +3,7 @@ export class RotatingShape {
 
   static fromString(initString) {
     const characters = initString.replaceAll(' ', '')
+      .trim()
       .split("\n")
       .map(row => Array.from(row));
     return new RotatingShape(characters);
