@@ -7,6 +7,14 @@ export class Tetromino {
      ...`
   );
 
+  static I_SHAPE = new Tetromino(
+    `.....
+     .....
+     IIII.
+     .....
+     .....`
+  );
+
   rotatingShape;
 
   constructor(initString) {
