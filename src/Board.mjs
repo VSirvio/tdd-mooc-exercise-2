@@ -1,6 +1,7 @@
 export class Board {
   width;
   height;
+  currentBlockCharacter;
   currentBlockLocation;
   gameArea;
 
@@ -23,7 +24,7 @@ export class Board {
       for (let x = 0; x < this.width; ++x) {
         if (this.currentBlockLocation && x === this.currentBlockLocation[0] &&
             y === this.currentBlockLocation[1]) {
-          result += 'X';
+          result += this.currentBlockCharacter;
         } else {
           result += this.gameArea[y][x];
         }
@@ -38,6 +39,7 @@ export class Board {
       throw Error('already falling');
     }
 
+    this.currentBlockCharacter = block;
     this.currentBlockLocation = [1, 0];
   }
 
@@ -45,7 +47,7 @@ export class Board {
     if (this.currentBlockLocation) {
       if (this.currentBlockLocation[1] === this.height - 1) {
         const [x, y] = this.currentBlockLocation;
-        this.gameArea[y][x] = 'X';
+        this.gameArea[y][x] = this.currentBlockCharacter;
         this.currentBlockLocation = undefined;
       } else {
         this.currentBlockLocation[1] += 1;
