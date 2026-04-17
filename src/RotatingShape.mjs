@@ -2,11 +2,12 @@ export class RotatingShape {
   characters;
 
   static fromString() {
-    return new RotatingShape();
+    const characters = ['ABC', 'DEF', 'GHI'].map(row => Array.from(row));
+    return new RotatingShape(characters);
   }
 
-  constructor() {
-    this.characters = ['ABC', 'DEF', 'GHI'].map(row => Array.from(row));
+  constructor(initCharacters) {
+    this.characters = initCharacters.map(row => [...row]);
   }
 
   toString() {
