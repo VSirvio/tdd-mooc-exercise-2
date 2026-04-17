@@ -21,8 +21,10 @@ export class RotatingShape {
   }
 
   rotateRight() {
-    return this.characters[2][0] + this.characters[1][0] + this.characters[0][0] + "\n" +
-      this.characters[2][1] + this.characters[1][1] + this.characters[0][1] + "\n" +
-      this.characters[2][2] + this.characters[1][2] + this.characters[0][2] + "\n";
+    let result = '';
+    for (let x = 0; x < this.characters[0].length; ++x) {
+      result += this.characters[2][x] + this.characters[1][x] + this.characters[0][x] + "\n";
+    }
+    return result;
   }
 }
