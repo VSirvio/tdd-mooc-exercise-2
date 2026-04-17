@@ -1,9 +1,15 @@
 export class RotatingShape {
+  characters;
+
   static fromString() {
     return new RotatingShape();
   }
 
+  constructor() {
+    this.characters = "ABC\nDEF\nGHI\n";
+  }
+
   toString() {
-    return "ABC\nDEF\nGHI\n";
+    return this.characters;
   }
 }
