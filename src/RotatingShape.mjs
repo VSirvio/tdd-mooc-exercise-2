@@ -1,8 +1,10 @@
 export class RotatingShape {
   characters;
 
-  static fromString() {
-    const characters = ['ABC', 'DEF', 'GHI'].map(row => Array.from(row));
+  static fromString(initString) {
+    const characters = initString.replaceAll(' ', '')
+      .split("\n")
+      .map(row => Array.from(row));
     return new RotatingShape(characters);
   }
 
