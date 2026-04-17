@@ -23,7 +23,10 @@ export class RotatingShape {
   rotateRight() {
     let result = '';
     for (let x = 0; x < this.characters[0].length; ++x) {
-      result += this.characters[2][x] + this.characters[1][x] + this.characters[0][x] + "\n";
+      for (let y = this.characters.length - 1; y >= 0; --y) {
+        result += this.characters[y][x];
+      }
+      result += "\n";
     }
     return result;
   }
