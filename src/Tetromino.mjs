@@ -16,24 +16,24 @@ export class Tetromino {
   );
 
   static fromString(initString) {
-    return new Tetromino(RotatingShape.fromString(initString));
+    return new Tetromino([RotatingShape.fromString(initString)]);
   }
 
-  rotatingShape;
+  rotatingShapes;
 
-  constructor(rotatingShape) {
-    this.rotatingShape = rotatingShape;
+  constructor(rotatingShapes) {
+    this.rotatingShapes = [...rotatingShapes];
   }
 
   toString() {
-    return this.rotatingShape.toString();
+    return this.rotatingShapes[0].toString();
   }
 
   rotateRight() {
-    return Tetromino.fromString(this.rotatingShape.rotateRight());
+    return Tetromino.fromString(this.rotatingShapes[0].rotateRight());
   }
 
   rotateLeft() {
-    return Tetromino.fromString(this.rotatingShape.rotateLeft());
+    return Tetromino.fromString(this.rotatingShapes[0].rotateLeft());
   }
 }
