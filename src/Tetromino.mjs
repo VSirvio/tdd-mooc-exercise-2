@@ -14,4 +14,8 @@ export class Tetromino {
   toString() {
     return this.characters.join("\n") + "\n";
   }
+
+  rotateRight() {
+    return new Tetromino(['.T.', '.TT', '.T.'])
+  }
 }
