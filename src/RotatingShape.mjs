@@ -30,4 +30,8 @@ export class RotatingShape {
     }
     return result;
   }
+
+  rotateLeft() {
+    return "CFI\nBEH\nADG\n";
+  }
 }
