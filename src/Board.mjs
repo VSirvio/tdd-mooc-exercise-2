@@ -25,7 +25,7 @@ export class Board {
             y === this.currentBlockLocation[1]) {
           result += 'X';
         } else {
-          result += '.';
+          result += this.gameArea[y][x];
         }
       }
       result += "\n";
