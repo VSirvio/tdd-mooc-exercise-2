@@ -6,10 +6,17 @@ export class RotatingShape {
   }
 
   constructor() {
-    this.characters = "ABC\nDEF\nGHI\n";
+    this.characters = ['ABC', 'DEF', 'GHI'].map(row => Array.from(row));
   }
 
   toString() {
-    return this.characters;
+    let result = '';
+    for (let y = 0; y < this.characters.length; ++y) {
+      for (let x = 0; x < this.characters[y].length; ++x) {
+        result += this.characters[y][x];
+      }
+      result += "\n";
+    }
+    return result;
   }
 }
