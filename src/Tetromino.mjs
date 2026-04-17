@@ -1,14 +1,16 @@
+import { RotatingShape } from "./RotatingShape.mjs";
+
 export class Tetromino {
   static T_SHAPE = new Tetromino(".T.\nTTT\n...");
 
-  characters;
+  rotatingShape;
 
-  constructor (initCharacters) {
-    this.characters = initCharacters;
+  constructor (initString) {
+    this.rotatingShape = RotatingShape.fromString(initString);
   }
 
   toString() {
-    return this.characters + "\n";
+    return this.rotatingShape.toString();
   }
 
   rotateRight() {
