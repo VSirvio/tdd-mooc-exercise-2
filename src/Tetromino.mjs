@@ -14,10 +14,10 @@ export class Tetromino {
   }
 
   rotateRight() {
-    return new Tetromino(".T.\n.TT\n.T.")
+    return new Tetromino(this.rotatingShape.rotateRight());
   }
 
   rotateLeft() {
-    return new Tetromino(".T.\nTT.\n.T.")
+    return new Tetromino(this.rotatingShape.rotateLeft());
   }
 }
