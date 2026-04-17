@@ -34,7 +34,10 @@ export class RotatingShape {
   rotateLeft() {
     let result = '';
     for (let x = this.characters[0].length - 1; x >= 0; --x) {
-      result += this.characters[0][x] + this.characters[1][x] + this.characters[2][x] + "\n";
+      for (let y = 0; y < this.characters.length; ++y) {
+        result += this.characters[y][x];
+      }
+      result += "\n";
     }
     return result;
   }
