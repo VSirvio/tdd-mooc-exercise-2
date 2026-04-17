@@ -21,6 +21,8 @@ export class RotatingShape {
   }
 
   rotateRight() {
-    return "GDA\nHEB\nIFC\n";
+    return this.characters[2][0] + this.characters[1][0] + this.characters[0][0] + "\n" +
+      this.characters[2][1] + this.characters[1][1] + this.characters[0][1] + "\n" +
+      this.characters[2][2] + this.characters[1][2] + this.characters[0][2] + "\n";
   }
 }
