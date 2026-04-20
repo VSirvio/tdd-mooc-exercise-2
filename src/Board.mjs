@@ -1,3 +1,5 @@
+import { SingleBlock } from "./SingleBlock.mjs";
+
 export class Board {
   width;
   height;
@@ -37,6 +39,11 @@ export class Board {
   drop(block) {
     if (this.currentBlockLocation) {
       throw Error('already falling');
+    }
+
+    let blockObject = block;
+    if (typeof block === 'string') {
+      blockObject = new SingleBlock(block);
     }
 
     this.currentBlockCharacter = block;
