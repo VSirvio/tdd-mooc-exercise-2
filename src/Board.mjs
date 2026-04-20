@@ -46,8 +46,10 @@ export class Board {
       blockObject = new SingleBlock(block);
     }
 
+    const blockWidth = blockObject.toString().indexOf("\n");
+
     this.currentBlock = blockObject;
-    this.currentBlockLocation = [Math.floor((this.width - 1) / 2), 0];
+    this.currentBlockLocation = [Math.floor((this.width - blockWidth) / 2), 0];
   }
 
   tick() {
