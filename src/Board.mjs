@@ -30,10 +30,14 @@ export class Board {
       for (let x = 0; x < this.width; ++x) {
         if (x === this.currentBlockLocation[0] &&
             y === this.currentBlockLocation[1]) {
-          result += this.currentBlock.toString().trim();
-        } else {
-          result += this.gameArea[y][x];
+          const character = this.currentBlock.toString().trim();
+          if (character !== '.') {
+            result += character;
+            continue;
+          }
         }
+
+        result += this.gameArea[y][x];
       }
       result += "\n";
     }
