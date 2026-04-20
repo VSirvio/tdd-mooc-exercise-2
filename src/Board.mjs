@@ -26,17 +26,14 @@ export class Board {
     }
 
     const currentBlock = this.currentBlock.toString().trim().split("\n");
+    const [currentBlockX, currentBlockY] = this.currentBlockLocation;
 
     let result = '';
     for (let y = 0; y < this.height; ++y) {
       for (let x = 0; x < this.width; ++x) {
-        if (x >= this.currentBlockLocation[0] &&
-            x < this.currentBlockLocation[0] + currentBlock[0].length &&
-            y >= this.currentBlockLocation[1] &&
-            y < this.currentBlockLocation[1] + currentBlock.length) {
-          const blockX = x - this.currentBlockLocation[0];
-          const blockY = y - this.currentBlockLocation[1];
-          const character = currentBlock[blockY][blockX];
+        if (x >= currentBlockX && x < currentBlockX + currentBlock[0].length &&
+            y >= currentBlockY && y < currentBlockY + currentBlock.length) {
+          const character = currentBlock[y - currentBlockY][x - currentBlockX];
           if (character !== '.') {
             result += character;
             continue;
