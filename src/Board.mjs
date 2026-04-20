@@ -25,12 +25,18 @@ export class Board {
       return this.gameArea.map(row => row.join('')).join("\n") + "\n";
     }
 
+    const currentBlock = this.currentBlock.toString().trim().split("\n");
+
     let result = '';
     for (let y = 0; y < this.height; ++y) {
       for (let x = 0; x < this.width; ++x) {
-        if (x === this.currentBlockLocation[0] &&
-            y === this.currentBlockLocation[1]) {
-          const character = this.currentBlock.toString().trim();
+        if (x >= this.currentBlockLocation[0] &&
+            x < this.currentBlockLocation[0] + currentBlock[0].length &&
+            y >= this.currentBlockLocation[1] &&
+            y < this.currentBlockLocation[1] + currentBlock.length) {
+          const blockX = x - this.currentBlockLocation[0];
+          const blockY = y - this.currentBlockLocation[1];
+          const character = currentBlock[blockY][blockX];
           if (character !== '.') {
             result += character;
             continue;
