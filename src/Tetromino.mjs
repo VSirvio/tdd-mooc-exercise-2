@@ -4,7 +4,8 @@ export class Tetromino {
   static T_SHAPE = Tetromino.fromString(
     `.T.
      TTT
-     ...`
+     ...`,
+     4
   );
 
   static I_SHAPE = Tetromino.fromString(
@@ -12,12 +13,13 @@ export class Tetromino {
      .....
      IIII.
      .....
-     .....`
+     .....`,
+     2
   );
 
-  static fromString(initString) {
+  static fromString(initString, orientationCount) {
     const rotatingShapes = [RotatingShape.fromString(initString)];
-    for (let i = 0; i < 3; ++i) {
+    for (let i = 0; i < orientationCount - 1; ++i) {
       rotatingShapes.push(RotatingShape.fromString(rotatingShapes.at(-1).rotateRight()));
     }
     return new Tetromino(rotatingShapes);
