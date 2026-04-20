@@ -26,7 +26,7 @@ export class Board {
       for (let x = 0; x < this.width; ++x) {
         if (this.currentBlockLocation && x === this.currentBlockLocation[0] &&
             y === this.currentBlockLocation[1]) {
-          result += this.currentBlock.character;
+          result += this.currentBlock.toString().trim();
         } else {
           result += this.gameArea[y][x];
         }
@@ -56,7 +56,7 @@ export class Board {
 
       if (this.currentBlockLocation[1] === this.height - 1 ||
           this.gameArea[y + 1][x] !== '.') {
-        this.gameArea[y][x] = this.currentBlock.character;
+        this.gameArea[y][x] = this.currentBlock.toString().trim();
         this.currentBlockLocation = undefined;
       } else {
         this.currentBlockLocation[1] += 1;
