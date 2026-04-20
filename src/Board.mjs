@@ -21,10 +21,14 @@ export class Board {
   }
 
   toString() {
+    if (this.currentBlockLocation === undefined) {
+      return this.gameArea.map(row => row.join('')).join("\n") + "\n";
+    }
+
     let result = '';
     for (let y = 0; y < this.height; ++y) {
       for (let x = 0; x < this.width; ++x) {
-        if (this.currentBlockLocation && x === this.currentBlockLocation[0] &&
+        if (x === this.currentBlockLocation[0] &&
             y === this.currentBlockLocation[1]) {
           result += this.currentBlock.toString().trim();
         } else {
