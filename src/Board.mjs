@@ -41,15 +41,6 @@ export class Board {
     let result = '';
     for (let y = 0; y < screenContent.length; ++y) {
       for (let x = 0; x < screenContent[0].length; ++x) {
-        if (x >= currentBlockX && x < currentBlockX + currentBlock[0].length &&
-            y >= currentBlockY && y < currentBlockY + currentBlock.length) {
-          const character = currentBlock[y - currentBlockY][x - currentBlockX];
-          if (character !== '.') {
-            result += screenContent[y][x];
-            continue;
-          }
-        }
-
         result += screenContent[y][x];
       }
       result += "\n";
