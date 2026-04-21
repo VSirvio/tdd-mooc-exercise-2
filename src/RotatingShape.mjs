@@ -40,10 +40,14 @@ export class RotatingShape {
   }
 
   rotateLeft() {
+    const rotated = this.characters[0].map((_, i) =>
+      this.characters.map(row => row[i])
+    ).toReversed();
+
     let result = '';
-    for (let x = this.characters[0].length - 1; x >= 0; --x) {
-      for (let y = 0; y < this.characters.length; ++y) {
-        result += this.characters[y][x];
+    for (let y = 0; y < rotated.length; ++y) {
+      for (let x = 0; x < rotated[y].length; ++x) {
+        result += rotated[y][x];
       }
       result += "\n";
     }
