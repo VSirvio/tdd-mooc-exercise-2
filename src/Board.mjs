@@ -66,8 +66,14 @@ export class Board {
   tick() {
     if (this.currentBlockLocation) {
       const [x, y] = this.currentBlockLocation;
+      const currentBlock = this.currentBlock.toString().trim().split("\n");
 
-      if (y === this.height - 1 || this.gameArea[y + 1][x] !== '.') {
+      let blockHeight = currentBlock.length;
+      while (blockHeight > 0 && currentBlock[blockHeight - 1].match(/^[.]+$/)) {
+        --blockHeight;
+      }
+
+      if (y === this.height - blockHeight || this.gameArea[y + 1][x] !== '.') {
         this.gameArea[y][x] = this.currentBlock.toString().trim();
         this.currentBlockLocation = undefined;
       } else {
