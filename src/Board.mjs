@@ -73,7 +73,8 @@ export class Board {
         --blockHeight;
       }
 
-      if (y === this.height - blockHeight || this.gameArea[y + 1][x] !== '.') {
+      if (y === this.height - blockHeight ||
+          !this.gameArea[y + blockHeight].join('').match(/^[.]+$/)) {
         for (let yIndex = 0; yIndex < currentBlock.length && y + yIndex < this.height; ++yIndex) {
           for (let xIndex = 0; xIndex < currentBlock[0].length && x + xIndex < this.width; ++xIndex) {
             const character = currentBlock[yIndex][xIndex];
