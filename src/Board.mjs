@@ -67,8 +67,7 @@ export class Board {
     if (this.currentBlockLocation) {
       const [x, y] = this.currentBlockLocation;
 
-      if (this.currentBlockLocation[1] === this.height - 1 ||
-          this.gameArea[y + 1][x] !== '.') {
+      if (y === this.height - 1 || this.gameArea[y + 1][x] !== '.') {
         this.gameArea[y][x] = this.currentBlock.toString().trim();
         this.currentBlockLocation = undefined;
       } else {
