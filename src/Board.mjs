@@ -28,6 +28,16 @@ export class Board {
     const currentBlock = this.currentBlock.toString().trim().split("\n");
     const [currentBlockX, currentBlockY] = this.currentBlockLocation;
 
+    const screenContent = this.gameArea.map(row => [...row]);
+    for (let y = 0; y < currentBlock.length; ++y) {
+      for (let x = 0; x < currentBlock[0].length; ++x) {
+        const character = currentBlock[y][x];
+        if (character !== '.') {
+          screenContent[currentBlockY + y][currentBlockX + x] = character;
+        }
+      }
+    }
+
     let result = '';
     for (let y = 0; y < this.height; ++y) {
       for (let x = 0; x < this.width; ++x) {
