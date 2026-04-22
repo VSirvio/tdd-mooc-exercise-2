@@ -54,4 +54,28 @@ describe("A falling tetromino", () => {
        ..........`
     );
   })
+
+  test("can reach the bottom when there is already a block", () => {
+    board.drop(Tetromino.T_SHAPE);
+    for (let i = 0; i < 3; ++i) {
+      board.moveLeft();
+    }
+    for (let i = 0; i < 5; ++i) {
+      board.tick();
+    }
+
+    board.drop(Tetromino.T_SHAPE);
+    for (let i = 0; i < 4; ++i) {
+      board.tick();
+    }
+
+    expect(board.toString()).to.equalShape(
+      `..........
+       ..........
+       ..........
+       ..........
+       .T..T.....
+       TTTTTT....`
+    );
+  })
 })
