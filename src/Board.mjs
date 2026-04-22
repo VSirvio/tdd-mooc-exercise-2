@@ -23,7 +23,7 @@ export class Board {
 
   toString() {
     if (this.currentBlockLocation === undefined) {
-      return this.gameArea.map(row => row.join('')).join("\n") + "\n";
+      return stringFrom2DArray(this.gameArea);
     }
 
     const currentBlock = this.currentBlock.toString().trim().split("\n");
