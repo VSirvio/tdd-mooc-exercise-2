@@ -42,6 +42,9 @@ export class Tetromino {
     return this.rotatingShapes[0].toString();
   }
 
+  to2DArray() {
+  }
+
   rotateRight() {
     return new Tetromino([...this.rotatingShapes.slice(1), this.rotatingShapes[0]]);
   }
