@@ -27,7 +27,6 @@ export class Board {
     }
 
     const currentBlock = this.currentBlock.toString().trim().split("\n");
-    const [currentBlockX, currentBlockY] = this.currentBlockLocation;
 
     const screenContent = composeOver(
       currentBlock,
