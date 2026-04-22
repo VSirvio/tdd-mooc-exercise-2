@@ -26,7 +26,6 @@ export class Board {
       return stringFrom2DArray(this.gameArea);
     }
 
-    const currentBlock = this.currentBlock.toString().trim().split("\n");
     const currentBlock2 = this.currentBlock.to2DArray();
 
     const screenContent = composeOver(
