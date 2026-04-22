@@ -1,11 +1,3 @@
-export function stringFrom2DArray(arr) {
-  return arr.map(row => row.join("")).join("\n") + "\n";
-}
-
-export function transpose(arr) {
-  return arr[0].map((_, i) => arr.map(row => row[i]));
-}
-
 export function composeOver(overlay, background, overlayLocation) {
   const [overlayX, overlayY] = overlayLocation;
 
@@ -19,4 +11,12 @@ export function composeOver(overlay, background, overlayLocation) {
   }
 
   return result;
+}
+
+export function stringFrom2DArray(arr) {
+  return arr.map(row => row.join("")).join("\n") + "\n";
+}
+
+export function transpose(arr) {
+  return arr[0].map((_, i) => arr.map(row => row[i]));
 }
