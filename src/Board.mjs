@@ -1,5 +1,5 @@
 import { SingleBlock } from "./SingleBlock.mjs";
-import { stringFrom2DArray } from "./utils.mjs";
+import { composeOver, stringFrom2DArray } from "./utils.mjs";
 
 export class Board {
   width;
@@ -29,15 +29,11 @@ export class Board {
     const currentBlock = this.currentBlock.toString().trim().split("\n");
     const [currentBlockX, currentBlockY] = this.currentBlockLocation;
 
-    const screenContent = this.gameArea.map(row => [...row]);
-    for (let y = 0; y < currentBlock.length && currentBlockY + y < screenContent.length; ++y) {
-      for (let x = 0; x < currentBlock[0].length && currentBlockX + x < screenContent[y].length; ++x) {
-        const character = currentBlock[y][x];
-        if (character !== '.') {
-          screenContent[currentBlockY + y][currentBlockX + x] = character;
-        }
-      }
-    }
+    const screenContent = composeOver(
+      currentBlock,
+      this.gameArea,
+      this.currentBlockLocation,
+    );
 
     return stringFrom2DArray(screenContent);
   }
