@@ -1,4 +1,5 @@
 import { beforeEach, describe, test } from "vitest";
+import { expect } from "chai";
 import { Board } from "../src/Board.mjs";
 import { Tetromino } from "../src/Tetromino.mjs";
 
@@ -11,5 +12,14 @@ describe("A falling tetromino", () => {
   test("can be moved left", () => {
     board.drop(Tetromino.T_SHAPE);
     board.moveLeft();
+
+    expect(board.toString()).to.equalShape(
+      `...T......
+       ..TTT.....
+       ..........
+       ..........
+       ..........
+       ..........`
+    );
   })
 })
