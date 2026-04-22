@@ -1,4 +1,4 @@
-import { stringFrom2DArray } from "./utils.mjs";
+import { stringFrom2DArray, transpose } from "./utils.mjs";
 
 export class RotatingShape {
   characters;
@@ -20,19 +20,13 @@ export class RotatingShape {
   }
 
   rotateRight() {
-    const transposed = this.characters[0].map((_, i) =>
-      this.characters.map(row => row[i])
-    );
-    const result = transposed.map(row => row.toReversed());
+    const result = transpose(this.characters).map(row => row.toReversed());
 
     return stringFrom2DArray(result);
   }
 
   rotateLeft() {
-    const transposed = this.characters[0].map((_, i) =>
-      this.characters.map(row => row[i])
-    );
-    const result = transposed.toReversed();
+    const result = transpose(this.characters).toReversed();
 
     return stringFrom2DArray(result);
   }
