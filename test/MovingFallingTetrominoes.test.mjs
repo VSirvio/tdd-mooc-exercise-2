@@ -38,4 +38,20 @@ describe("A falling tetromino", () => {
        ..........`
     );
   })
+
+  test.skip("that is O shaped cannot be moved left beyond the board", () => {
+    board.drop(Tetromino.O_SHAPE);
+    for (let i = 0; i < 5; ++i) {
+      board.moveLeft();
+    }
+
+    expect(board.toString()).to.equalShape(
+      `OO........
+       OO........
+       ..........
+       ..........
+       ..........
+       ..........`
+    );
+  })
 })
