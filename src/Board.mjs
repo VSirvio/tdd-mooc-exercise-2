@@ -1,4 +1,5 @@
 import { SingleBlock } from "./SingleBlock.mjs";
+import { stringFrom2DArray } from "./utils.mjs";
 
 export class Board {
   width;
@@ -38,14 +39,7 @@ export class Board {
       }
     }
 
-    let result = '';
-    for (let y = 0; y < screenContent.length; ++y) {
-      for (let x = 0; x < screenContent[0].length; ++x) {
-        result += screenContent[y][x];
-      }
-      result += "\n";
-    }
-    return result;
+    return stringFrom2DArray(screenContent);
   }
 
   drop(block) {
