@@ -7,7 +7,16 @@ export function transpose(arr) {
 }
 
 export function composeOver(overlay, background, overlayLocation) {
+  const [overlayX, overlayY] = overlayLocation;
+
   const result = background.map(row => [...row]);
+  for (let y = 0; y < overlay.length && overlayY + y < result.length; ++y) {
+    for (let x = 0; x < overlay[0].length && overlayX + x < result[0].length; ++x) {
+      if (overlay[y][x] !== '.') {
+        result[overlayY + y][overlayX + x] = overlay[y][x];
+      }
+    }
+  }
 
   return result;
 }
