@@ -84,6 +84,8 @@ export class Board {
   }
 
   moveLeft() {
-    this.currentBlockLocation[0] -= 1;
+    if (this.currentBlockLocation[0] > 0) {
+      this.currentBlockLocation[0] -= 1;
+    }
   }
 }
