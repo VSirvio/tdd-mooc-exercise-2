@@ -8,4 +8,7 @@ export class SingleBlock {
     toString() {
         return this.character + "\n";
     }
+
+    to2DArray() {
+    }
 }
