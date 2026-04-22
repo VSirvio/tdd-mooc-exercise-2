@@ -1,3 +1,5 @@
+import { stringFrom2DArray } from "./utils.mjs";
+
 export class RotatingShape {
   characters;
 
@@ -14,14 +16,7 @@ export class RotatingShape {
   }
 
   toString() {
-    let result = '';
-    for (let y = 0; y < this.characters.length; ++y) {
-      for (let x = 0; x < this.characters[y].length; ++x) {
-        result += this.characters[y][x];
-      }
-      result += "\n";
-    }
-    return result;
+    return stringFrom2DArray(this.characters);
   }
 
   rotateRight() {
