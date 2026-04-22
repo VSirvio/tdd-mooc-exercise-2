@@ -32,13 +32,6 @@ export class RotatingShape {
       this.characters.map(row => row[i])
     ).toReversed();
 
-    let result = '';
-    for (let y = 0; y < rotated.length; ++y) {
-      for (let x = 0; x < rotated[y].length; ++x) {
-        result += rotated[y][x];
-      }
-      result += "\n";
-    }
-    return result;
+    return stringFrom2DArray(rotated);
   }
 }
