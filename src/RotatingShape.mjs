@@ -20,18 +20,20 @@ export class RotatingShape {
   }
 
   rotateRight() {
-    const rotated = this.characters[0].map((_, i) =>
-      this.characters.map(row => row[i]).toReversed()
+    const transposed = this.characters[0].map((_, i) =>
+      this.characters.map(row => row[i])
     );
+    const result = transposed.map(row => row.toReversed());
 
-    return stringFrom2DArray(rotated);
+    return stringFrom2DArray(result);
   }
 
   rotateLeft() {
-    const rotated = this.characters[0].map((_, i) =>
+    const transposed = this.characters[0].map((_, i) =>
       this.characters.map(row => row[i])
-    ).toReversed();
+    );
+    const result = transposed.toReversed();
 
-    return stringFrom2DArray(rotated);
+    return stringFrom2DArray(result);
   }
 }
