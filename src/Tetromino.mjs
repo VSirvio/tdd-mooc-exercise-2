@@ -43,6 +43,7 @@ export class Tetromino {
   }
 
   to2DArray() {
+    return this.rotatingShapes[0].toString().trim().split("\n")
   }
 
   rotateRight() {
