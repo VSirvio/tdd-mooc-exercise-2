@@ -49,7 +49,7 @@ export class Board {
   }
 
   drop(block) {
-    if (this.#currentBlockLocation) {
+    if (this.#currentBlockLocation2) {
       throw Error('already falling');
     }
 
