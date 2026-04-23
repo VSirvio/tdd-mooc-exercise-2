@@ -19,6 +19,7 @@ export class Board {
       for (let x = 0; x < width; ++x) {
         this.#gameArea[y][x] = '.';
       }
+      this.#gameArea[y] = ['#', ...this.#gameArea[y], '#'];
     }
     this.#gameArea.push(new Array(width).fill('#'));
   }
@@ -104,7 +105,7 @@ export class Board {
       ++leftGap;
     }
 
-    if (this.#currentBlockLocation[0] > -leftGap && !this.#collides(-1, 0)) {
+    if (this.#currentBlockLocation[0] > -leftGap + 1 && !this.#collides(-1, 0)) {
       this.#currentBlockLocation[0] -= 1;
     }
   }
