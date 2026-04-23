@@ -33,7 +33,6 @@ export class Tetromino {
   }
 
   #rotatingShapes;
-  rotatingShapes;
 
   constructor(rotatingShapes) {
     this.#rotatingShapes = [...rotatingShapes];
