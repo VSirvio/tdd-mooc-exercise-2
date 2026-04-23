@@ -82,7 +82,7 @@ export class Board {
   #collides(dx, dy, block) {
     const blockX = this.#currentBlockLocation.getX();
     const blockY = this.#currentBlockLocation.getY();
-    const currentBlock = this.#currentBlock.to2DArray();
+    const currentBlock = block.to2DArray();
     for (let y = 0; y < currentBlock.length; ++y) {
       for (let x = 0; x < currentBlock[0].length; ++x) {
         if (currentBlock[y][x] !== '.' &&
