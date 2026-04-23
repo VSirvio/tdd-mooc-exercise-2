@@ -53,6 +53,6 @@ export class Tetromino {
   }
 
   rotateLeft() {
-    return new Tetromino([this.#rotatingShapes.at(-1), ...this.rotatingShapes.slice(0, -1)]);
+    return new Tetromino([this.#rotatingShapes.at(-1), ...this.#rotatingShapes.slice(0, -1)]);
   }
 }
