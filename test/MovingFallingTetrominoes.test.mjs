@@ -21,7 +21,7 @@ describe("A falling tetromino", () => {
        ..........
        ..........`
     );
-  })
+  });
 
   test("cannot be moved left beyond the board", () => {
     board.drop(Tetromino.T_SHAPE);
@@ -37,7 +37,7 @@ describe("A falling tetromino", () => {
        ..........
        ..........`
     );
-  })
+  });
 
   test("that is O shaped cannot be moved left beyond the board", () => {
     board.drop(Tetromino.O_SHAPE);
@@ -53,7 +53,7 @@ describe("A falling tetromino", () => {
        ..........
        ..........`
     );
-  })
+  });
 
   test("can reach the bottom when there is already a block", () => {
     board.drop(Tetromino.T_SHAPE);
@@ -77,7 +77,7 @@ describe("A falling tetromino", () => {
        .T..T.....
        TTTTTT....`
     );
-  })
+  });
 
   test("with O shape can fall on top of T shape diagonally", () => {
     board.drop(Tetromino.T_SHAPE);
@@ -99,5 +99,28 @@ describe("A falling tetromino", () => {
        ...TOO....
        ..TTT.....`
     );
-  })
-})
+  });
+
+  test.skip("cannot be moved left through other blocks", () => {
+    board.drop(Tetromino.T_SHAPE);
+    board.moveLeft();
+    for (let i = 0; i < 5; ++i) {
+      board.tick();
+    }
+
+    board.drop(Tetromino.O_SHAPE);
+    for (let i = 0; i < 3; ++i) {
+      board.tick();
+    }
+    board.moveLeft();
+
+    expect(board.toString()).to.equalShape(
+      `..........
+       ..........
+       ..........
+       ....OO....
+       ...TOO....
+       ..TTT.....`
+    );
+  });
+});
