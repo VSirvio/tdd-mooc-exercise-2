@@ -84,7 +84,7 @@ export class Board {
     for (let y = 0; y < currentBlock.length; ++y) {
       for (let x = 0; x < currentBlock[0].length; ++x) {
         if (currentBlock[y][x] !== '.' &&
-            this.#gameArea[blockY + y + 1][blockX + x] !== '.') {
+            this.#gameArea[blockY + y + dy][blockX + x + dx] !== '.') {
           return true;
         }
       }
