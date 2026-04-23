@@ -22,6 +22,7 @@ export class Board {
   }
 
   getWidth() {
+    return this.gameArea[0].length;
   }
 
   toString() {
@@ -51,7 +52,7 @@ export class Board {
     const blockWidth = blockObject.toString().indexOf("\n");
 
     this.currentBlock = blockObject;
-    this.currentBlockLocation = [Math.floor((this.width - blockWidth) / 2), 0];
+    this.currentBlockLocation = [Math.floor((this.getWidth() - blockWidth) / 2), 0];
   }
 
   tick() {
