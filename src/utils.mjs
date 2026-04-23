@@ -4,6 +4,7 @@ export function bottomMargin(arr) {
   while (blockBottomMargin < arr.length &&
       arr[arr.length - blockBottomMargin - 1].match(/^[.]+$/)) {
     ++blockBottomMargin;
+    ++margin;
   }
   return blockBottomMargin;
 }
