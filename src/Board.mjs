@@ -64,7 +64,7 @@ export class Board {
 
       let blockBottomMargin = bottomMargin(currentBlock);
 
-      if (this.#collidesDownward(0, 1)) {
+      if (this.#collides(0, 1)) {
         this.#gameArea = composeOver(
           currentBlock,
           this.#gameArea,
@@ -78,7 +78,7 @@ export class Board {
     }
   }
 
-  #collidesDownward(dx, dy) {
+  #collides(dx, dy) {
     const [blockX, blockY] = this.#currentBlockLocation;
     const currentBlock = this.#currentBlock.to2DArray();
     for (let y = 0; y < currentBlock.length; ++y) {
