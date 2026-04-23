@@ -37,6 +37,7 @@ export class Tetromino {
 
   constructor(rotatingShapes) {
     this.rotatingShapes = [...rotatingShapes];
+    this.#rotatingShapes = [...rotatingShapes];
   }
 
   toString() {
