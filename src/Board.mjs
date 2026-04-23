@@ -115,7 +115,7 @@ export class Board {
   moveDown() {
     const newLocation = this.#currentBlockLocation.movedBy(0, 1);
     if (!this.#overlaps(this.#currentBlock, newLocation)) {
-      this.#currentBlockLocation = this.#currentBlockLocation.movedBy(0, 1);
+      this.#currentBlockLocation = newLocation;
     }
   }
 
