@@ -78,7 +78,7 @@ export class Board {
     }
   }
 
-  #collidesDownward() {
+  #collidesDownward(dx, dy) {
     const [blockX, blockY] = this.#currentBlockLocation;
     const currentBlock = this.#currentBlock.to2DArray();
     for (let y = 0; y < currentBlock.length; ++y) {
