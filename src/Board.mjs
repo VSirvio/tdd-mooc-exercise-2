@@ -8,8 +8,6 @@ export class Board {
   gameArea;
 
   constructor(width, height) {
-    this.height = height;
-
     this.gameArea = new Array(height);
     for (let y = 0; y < height; ++y) {
       this.gameArea[y] = new Array(width);
