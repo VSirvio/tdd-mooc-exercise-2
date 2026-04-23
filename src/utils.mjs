@@ -1,5 +1,4 @@
 export function bottomMargin(arr) {
-  let blockBottomMargin = 0;
   let margin = 0;
   while (margin < arr.length &&
       arr[arr.length - margin - 1].match(/^[.]+$/)) {
