@@ -24,6 +24,7 @@ export class Board {
   }
 
   getHeight() {
+    return this.gameArea.length;
   }
 
   toString() {
@@ -63,7 +64,7 @@ export class Board {
 
       let blockBottomMargin = bottomMargin(currentBlock);
 
-      if (y === this.height - currentBlock.length + blockBottomMargin ||
+      if (y === this.getHeight() - currentBlock.length + blockBottomMargin ||
           !this.gameArea[y + currentBlock.length - blockBottomMargin].slice(x, x + currentBlock[0].length)
             .join('').match(/^[.]+$/)) {
 
