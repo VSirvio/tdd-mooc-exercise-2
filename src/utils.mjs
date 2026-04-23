@@ -4,7 +4,7 @@ export function composeOver(overlay, background, overlayLocation, overlayLocatio
   const overlayY2 = overlayLocation2.getY();
 
   const result = background.map(row => [...row]);
-  for (let y = 0; y < overlay.length && overlayY2 + y < result.length; ++y) {
+  for (let y = 0; y < overlay.length && overlayY + y < result.length; ++y) {
     for (let x = 0; x < overlay[0].length && overlayX + x < result[0].length; ++x) {
       if (overlay[y][x] !== '.') {
         result[overlayY2 + y][overlayX + x] = overlay[y][x];
