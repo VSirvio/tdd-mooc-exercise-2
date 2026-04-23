@@ -14,6 +14,7 @@ export class Board {
         this.#gameArea[y][x] = '.';
       }
     }
+    this.#gameArea.push(new Array(width).fill('#'));
   }
 
   getWidth() {
@@ -25,7 +26,7 @@ export class Board {
   }
 
   toString() {
-    const gameAreaWithoutBorders = this.#gameArea;
+    const gameAreaWithoutBorders = this.#gameArea.slice(0, -1);
 
     if (this.#currentBlockLocation === undefined) {
       return stringFrom2DArray(gameAreaWithoutBorders);
@@ -63,7 +64,7 @@ export class Board {
 
       let blockBottomMargin = bottomMargin(currentBlock);
 
-      if (y === this.getHeight() - currentBlock.length + blockBottomMargin ||
+      if (y === this.getHeight() - 1 - currentBlock.length + blockBottomMargin ||
           this.#collidesDownward()) {
 
         this.#gameArea = composeOver(
