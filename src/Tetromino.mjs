@@ -32,6 +32,7 @@ export class Tetromino {
     return new Tetromino(rotatingShapes);
   }
 
+  #rotatingShapes;
   rotatingShapes;
 
   constructor(rotatingShapes) {
