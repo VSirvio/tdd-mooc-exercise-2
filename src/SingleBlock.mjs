@@ -4,6 +4,7 @@ export class SingleBlock {
 
     constructor(character) {
         this.character = character;
+        this.#character = character;
     }
 
     toString() {
