@@ -12,6 +12,6 @@ export class SingleBlock {
     }
 
     to2DArray() {
-        return [this.character];
+        return [this.#character];
     }
 }
