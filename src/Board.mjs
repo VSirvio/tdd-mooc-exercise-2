@@ -30,7 +30,7 @@ export class Board {
 
   toString() {
     if (this.currentBlockLocation === undefined) {
-      return stringFrom2DArray(this.gameArea);
+      return stringFrom2DArray(this.#gameArea);
     }
 
     const screenContent = composeOver(
