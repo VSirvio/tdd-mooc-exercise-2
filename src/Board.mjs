@@ -5,7 +5,6 @@ export class Board {
   currentBlock;
   currentBlockLocation;
   #gameArea;
-  gameArea;
 
   constructor(width, height) {
     this.#gameArea = new Array(height);
