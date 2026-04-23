@@ -122,6 +122,9 @@ export class Board {
   }
 
   rotateRight() {
-    this.#currentBlock = this.#currentBlock.rotateRight();
+    const rotatedBlock = this.#currentBlock.rotateRight();
+    if (!this.#overlaps(rotatedBlock, this.#currentBlockLocation)) {
+      this.#currentBlock = rotatedBlock;
+    }
   }
 }

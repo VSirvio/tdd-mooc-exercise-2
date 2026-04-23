@@ -23,7 +23,7 @@ describe("A falling tetromino", () => {
     );
   });
 
-  test.skip("cannot be rotated right when there is no room to rotate", () => {
+  test("cannot be rotated right when there is no room to rotate", () => {
     board.drop(Tetromino.T_SHAPE);
     for (let i = 0; i < 4; ++i) {
         board.tick();
