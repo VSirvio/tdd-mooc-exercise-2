@@ -22,5 +22,5 @@ export function transpose(arr) {
 }
 
 export function withoutBorders(arr) {
-  return arr[0][0] === '#' ? arr.slice(0, -1).map(row => row.slice(1, -1)) : arr.slice(0, -1);
+  return arr.slice(0, -1).map(row => row.slice(1, -1));
 }
