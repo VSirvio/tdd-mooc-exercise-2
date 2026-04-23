@@ -103,6 +103,8 @@ export class Board {
   }
 
   moveRight() {
-    this.#currentBlockLocation[0] += 1;
+    if (!this.#collides(1, 0)) {
+      this.#currentBlockLocation[0] += 1;
+    }
   }
 }
