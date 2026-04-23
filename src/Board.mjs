@@ -69,11 +69,6 @@ export class Board {
           !this.#gameArea[y + currentBlock.length - blockBottomMargin].slice(x, x + currentBlock[0].length)
             .join('').match(/^[.]+$/)) {
 
-        this.gameArea = composeOver(
-          currentBlock,
-          this.gameArea,
-          this.currentBlockLocation,
-        );
         this.#gameArea = composeOver(
           currentBlock,
           this.#gameArea,
