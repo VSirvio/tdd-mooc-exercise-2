@@ -6,7 +6,7 @@ export function bottomMargin(arr) {
     ++blockBottomMargin;
     ++margin;
   }
-  return blockBottomMargin;
+  return margin;
 }
 
 export function composeOver(overlay, background, overlayLocation) {
