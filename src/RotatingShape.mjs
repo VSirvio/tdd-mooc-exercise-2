@@ -22,7 +22,7 @@ export class RotatingShape {
   }
 
   rotateRight() {
-    const result = transpose(this.characters).map(row => row.toReversed());
+    const result = transpose(this.#characters).map(row => row.toReversed());
 
     return stringFrom2DArray(result);
   }
