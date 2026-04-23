@@ -52,6 +52,7 @@ export class Board {
     const blockWidth = blockObject.toString().indexOf("\n");
 
     this.#currentBlock = blockObject;
+    this.#currentBlockLocation = [Math.floor((this.getWidth() - blockWidth) / 2), 0];
     this.currentBlockLocation = [Math.floor((this.getWidth() - blockWidth) / 2), 0];
   }
 
