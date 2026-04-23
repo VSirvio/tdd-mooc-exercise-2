@@ -56,7 +56,6 @@ export class Board {
       const [x, y] = this.currentBlockLocation;
       const currentBlock = this.currentBlock.to2DArray();
 
-      let blockHeight = currentBlock.length;
       let blockBottomMargin = 0;
       while (blockBottomMargin < currentBlock.length &&
           currentBlock[currentBlock.length - blockBottomMargin - 1].match(/^[.]+$/)) {
