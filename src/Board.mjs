@@ -56,6 +56,7 @@ export class Board {
       const [x, y] = this.currentBlockLocation;
       const currentBlock = this.currentBlock.to2DArray();
 
+      let blockBottomMargin = bottomMargin(currentBlock);
       let blockBottomMargin2 = bottomMargin(currentBlock);
 
       if (y === this.height - currentBlock.length + blockBottomMargin2 ||
