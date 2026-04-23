@@ -26,7 +26,7 @@ export class Board {
   }
 
   toString() {
-    if (this.currentBlockLocation === undefined) {
+    if (this.#currentBlockLocation === undefined) {
       return stringFrom2DArray(this.#gameArea);
     }
 
