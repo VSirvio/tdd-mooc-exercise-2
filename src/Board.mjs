@@ -78,11 +78,11 @@ export class Board {
   }
 
   #collidesDownward() {
-      const [x, y] = this.#currentBlockLocation;
-      const currentBlock = this.#currentBlock.to2DArray();
-      const blockBottomMargin = bottomMargin(currentBlock);
-      return !this.#gameArea[y + currentBlock.length - blockBottomMargin]
-        .slice(x, x + currentBlock[0].length).join('').match(/^[.]+$/);
+    const [x, y] = this.#currentBlockLocation;
+    const currentBlock = this.#currentBlock.to2DArray();
+    const blockBottomMargin = bottomMargin(currentBlock);
+    return !this.#gameArea[y + currentBlock.length - blockBottomMargin]
+      .slice(x, x + currentBlock[0].length).join('').match(/^[.]+$/);
   }
 
   hasFalling() {
