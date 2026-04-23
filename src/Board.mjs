@@ -97,14 +97,6 @@ export class Board {
   }
 
   moveLeft() {
-    const currentBlock = this.#currentBlock.to2DArray();
-
-    let leftGap = 0;
-    while (leftGap < currentBlock[0].length &&
-        currentBlock.map(row => row[leftGap]).every(ch => ch === '.')) {
-      ++leftGap;
-    }
-
     if (!this.#collides(-1, 0)) {
       this.#currentBlockLocation[0] -= 1;
     }
