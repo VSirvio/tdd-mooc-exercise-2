@@ -94,10 +94,6 @@ export class Board {
     return false;
   }
 
-  #collides(dx, dy, block, blockLocation) {
-    return this.#overlaps(block, blockLocation);
-  }
-
   hasFalling() {
     return this.#currentBlockLocation !== undefined;
   }
