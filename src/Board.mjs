@@ -4,7 +4,6 @@ import { bottomMargin, composeOver, stringFrom2DArray } from "./utils.mjs";
 export class Board {
   #currentBlock;
   #currentBlockLocation;
-  currentBlockLocation;
   #gameArea;
 
   constructor(width, height) {
