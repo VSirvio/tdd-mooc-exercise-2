@@ -57,6 +57,7 @@ export class Board {
       const currentBlock = this.currentBlock.to2DArray();
 
       let blockHeight = currentBlock.length;
+      let blockBottomMargin = 0;
       while (blockHeight > 0 && currentBlock[blockHeight - 1].match(/^[.]+$/)) {
         --blockHeight;
       }
