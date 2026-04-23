@@ -96,6 +96,7 @@ export class Board {
     }
 
     if (this.currentBlockLocation[0] > -leftGap) {
+      this.#currentBlockLocation[0] -= 1;
       this.currentBlockLocation[0] -= 1;
     }
   }
