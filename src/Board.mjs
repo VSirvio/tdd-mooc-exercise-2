@@ -23,6 +23,9 @@ export class Board {
     return this.gameArea[0].length;
   }
 
+  getHeight() {
+  }
+
   toString() {
     if (this.currentBlockLocation === undefined) {
       return stringFrom2DArray(this.gameArea);
