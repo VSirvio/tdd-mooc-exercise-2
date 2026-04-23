@@ -66,7 +66,7 @@ export class Board {
       let blockBottomMargin = bottomMargin(currentBlock);
 
       if (y === this.getHeight() - currentBlock.length + blockBottomMargin ||
-          !this.gameArea[y + currentBlock.length - blockBottomMargin].slice(x, x + currentBlock[0].length)
+          !this.#gameArea[y + currentBlock.length - blockBottomMargin].slice(x, x + currentBlock[0].length)
             .join('').match(/^[.]+$/)) {
 
         this.gameArea = composeOver(
