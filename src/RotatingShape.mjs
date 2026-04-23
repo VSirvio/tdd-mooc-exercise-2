@@ -28,7 +28,7 @@ export class RotatingShape {
   }
 
   rotateLeft() {
-    const result = transpose(this.characters).toReversed();
+    const result = transpose(this.#characters).toReversed();
 
     return stringFrom2DArray(result);
   }
