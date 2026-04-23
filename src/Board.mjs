@@ -78,6 +78,9 @@ export class Board {
     }
   }
 
+  #collidesDownward() {
+  }
+
   hasFalling() {
     return this.#currentBlockLocation !== undefined;
   }
