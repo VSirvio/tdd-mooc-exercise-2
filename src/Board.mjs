@@ -59,7 +59,6 @@ export class Board {
 
   tick() {
     if (this.#currentBlockLocation) {
-      const [x, y] = this.#currentBlockLocation;
       const currentBlock = this.#currentBlock.to2DArray();
 
       let blockBottomMargin = bottomMargin(currentBlock);
