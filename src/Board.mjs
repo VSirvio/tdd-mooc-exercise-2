@@ -119,7 +119,6 @@ export class Board {
   moveDown() {
     if (!this.#collides(0, 1)) {
       this.#currentBlockLocation = this.#currentBlockLocation.movedBy(0, 1);
-      this.#currentBlockLocation2 = this.#currentBlockLocation2.movedBy(0, 1);
     }
   }
 
