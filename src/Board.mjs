@@ -79,7 +79,7 @@ export class Board {
     }
   }
 
-  #collides(dx, dy, block, blockLocation) {
+  #overlaps(block, blockLocation) {
     const blockX = blockLocation.getX();
     const blockY = blockLocation.getY();
     const currentBlock = block.to2DArray();
@@ -92,6 +92,10 @@ export class Board {
       }
     }
     return false;
+  }
+
+  #collides(dx, dy, block, blockLocation) {
+    return this.#overlaps(block, blockLocation);
   }
 
   hasFalling() {
