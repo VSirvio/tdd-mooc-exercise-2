@@ -2,7 +2,6 @@ import { stringFrom2DArray, transpose } from "./utils.mjs";
 
 export class RotatingShape {
   #characters;
-  characters;
 
   static fromString(initString) {
     const characters = initString.replaceAll(' ', '')
