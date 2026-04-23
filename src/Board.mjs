@@ -35,7 +35,7 @@ export class Board {
   }
 
   toString() {
-    if (this.#currentBlockLocation2 === undefined) {
+    if (this.#currentBlockLocation === undefined) {
       return stringFrom2DArray(withoutBorders(this.#gameArea));
     }
 
