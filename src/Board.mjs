@@ -103,5 +103,6 @@ export class Board {
   }
 
   moveRight() {
+    this.#currentBlockLocation[0] += 1;
   }
 }
