@@ -1,5 +1,5 @@
 import { SingleBlock } from "./SingleBlock.mjs";
-import { bottomMargin, composeOver, stringFrom2DArray } from "./utils.mjs";
+import { bottomMargin, composeOver, stringFrom2DArray, withoutBorders } from "./utils.mjs";
 
 export class Board {
   #currentBlock;
@@ -26,7 +26,7 @@ export class Board {
   }
 
   toString() {
-    const gameAreaWithoutBorders = this.#gameArea.slice(0, -1);
+    const gameAreaWithoutBorders = withoutBorders(this.#gameArea);
 
     if (this.#currentBlockLocation === undefined) {
       return stringFrom2DArray(gameAreaWithoutBorders);
