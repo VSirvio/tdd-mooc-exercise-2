@@ -81,12 +81,12 @@ export class Board {
 
   #collides(dx, dy, block, blockLocation) {
     const blockX = blockLocation.getX();
-    const blockY = this.#currentBlockLocation.getY();
+    const blockY = blockLocation.getY();
     const currentBlock = block.to2DArray();
     for (let y = 0; y < currentBlock.length; ++y) {
       for (let x = 0; x < currentBlock[0].length; ++x) {
         if (currentBlock[y][x] !== '.' &&
-            this.#gameArea[blockY + y + dy][blockX + x] !== '.') {
+            this.#gameArea[blockY + y][blockX + x] !== '.') {
           return true;
         }
       }
