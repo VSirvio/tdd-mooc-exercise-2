@@ -101,7 +101,7 @@ describe("A falling tetromino", () => {
     );
   });
 
-  test.skip("cannot be moved left through other blocks", () => {
+  test("cannot be moved left through other blocks", () => {
     board.drop(Tetromino.T_SHAPE);
     board.moveLeft();
     for (let i = 0; i < 5; ++i) {

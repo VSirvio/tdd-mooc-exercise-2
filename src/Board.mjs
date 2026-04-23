@@ -105,7 +105,7 @@ export class Board {
       ++leftGap;
     }
 
-    if (this.#currentBlockLocation[0] > -leftGap) {
+    if (this.#currentBlockLocation[0] > -leftGap && !this.#collides(-1, 0)) {
       this.#currentBlockLocation[0] -= 1;
     }
   }
