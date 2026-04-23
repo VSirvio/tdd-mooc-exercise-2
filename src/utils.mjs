@@ -1,5 +1,4 @@
 export function composeOver(overlay, background, overlayLocation, overlayLocation2) {
-  const [overlayX, overlayY] = overlayLocation;
   const overlayX2 = overlayLocation2.getX();
   const overlayY2 = overlayLocation2.getY();
 
