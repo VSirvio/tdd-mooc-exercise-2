@@ -153,4 +153,28 @@ describe("A falling tetromino", () => {
        ..........`
     );
   });
+
+  test("cannot be moved right through other blocks", () => {
+    board.drop(Tetromino.T_SHAPE);
+    board.moveRight();
+    board.moveRight();
+    for (let i = 0; i < 5; ++i) {
+      board.tick();
+    }
+
+    board.drop(Tetromino.O_SHAPE);
+    for (let i = 0; i < 3; ++i) {
+      board.tick();
+    }
+    board.moveRight();
+
+    expect(board.toString()).to.equalShape(
+      `..........
+       ..........
+       ..........
+       ....OO....
+       ....OOT...
+       .....TTT..`
+    );
+  });
 });
