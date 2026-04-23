@@ -1,4 +1,5 @@
 export class SingleBlock {
+    #character;
     character;
 
     constructor(character) {
