@@ -99,7 +99,7 @@ export class Board {
   }
 
   moveLeft() {
-    if (!this.#collides(-1, 0)) {
+    if (!this.#collides(-1, 0, this.#currentBlock)) {
       this.#currentBlockLocation = this.#currentBlockLocation.movedBy(-1, 0);
     }
   }
