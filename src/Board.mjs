@@ -85,7 +85,7 @@ export class Board {
   }
 
   moveLeft() {
-    const currentBlock = this.currentBlock.to2DArray();
+    const currentBlock = this.#currentBlock.to2DArray();
 
     let leftGap = 0;
     while (leftGap < currentBlock[0].length &&
