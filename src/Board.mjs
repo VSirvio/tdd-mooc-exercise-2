@@ -62,6 +62,7 @@ export class Board {
 
     this.#currentBlock = blockObject;
     this.#currentBlockLocation = [Math.floor((this.getWidth() - blockWidth) / 2), 0];
+    this.#currentBlockLocation2 = new Coord2D(Math.floor((this.getWidth() - blockWidth) / 2), 0);
   }
 
   tick() {
