@@ -64,9 +64,7 @@ export class Board {
 
       let blockBottomMargin = bottomMargin(currentBlock);
 
-      if (y === this.getHeight() - 1 - currentBlock.length + blockBottomMargin ||
-          this.#collidesDownward()) {
-
+      if (this.#collidesDownward()) {
         this.#gameArea = composeOver(
           currentBlock,
           this.#gameArea,
