@@ -25,7 +25,7 @@ export class Board {
   }
 
   getHeight() {
-    return this.gameArea.length;
+    return this.#gameArea.length;
   }
 
   toString() {
