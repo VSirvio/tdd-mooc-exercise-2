@@ -61,9 +61,8 @@ export class Board {
 
       let blockBottomMargin = bottomMargin(currentBlock);
 
-      if (this.#collidesDownward() ||
-          y === this.getHeight() - currentBlock.length + blockBottomMargin ||
-          !this.#gameArea[y + currentBlock.length - blockBottomMargin].slice(x, x + currentBlock[0].length)
+      if (y === this.getHeight() - currentBlock.length + blockBottomMargin ||
+          !this.#collidesDownward().slice(x, x + currentBlock[0].length)
             .join('').match(/^[.]+$/)) {
 
         this.#gameArea = composeOver(
@@ -80,6 +79,10 @@ export class Board {
   }
 
   #collidesDownward() {
+      const [x, y] = this.#currentBlockLocation;
+      const currentBlock = this.#currentBlock.to2DArray();
+      const blockBottomMargin = bottomMargin(currentBlock);
+      return this.#gameArea[y + currentBlock.length - blockBottomMargin];
   }
 
   hasFalling() {
