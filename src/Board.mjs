@@ -100,7 +100,7 @@ export class Board {
 
   moveLeft() {
     const newLocation = this.#currentBlockLocation.movedBy(-1, 0);
-    if (!this.#overlaps(this.#currentBlock, this.#currentBlockLocation.movedBy(-1, 0))) {
+    if (!this.#overlaps(this.#currentBlock, newLocation)) {
       this.#currentBlockLocation = this.#currentBlockLocation.movedBy(-1, 0);
     }
   }
