@@ -3,7 +3,6 @@ export function bottomMargin(arr) {
   let margin = 0;
   while (margin < arr.length &&
       arr[arr.length - margin - 1].match(/^[.]+$/)) {
-    ++blockBottomMargin;
     ++margin;
   }
   return margin;
