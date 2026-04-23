@@ -32,19 +32,17 @@ export class Board {
   }
 
   toString() {
-    const gameAreaWithoutBorders = withoutBorders(this.#gameArea);
-
     if (this.#currentBlockLocation === undefined) {
-      return stringFrom2DArray(gameAreaWithoutBorders);
+      return stringFrom2DArray(withoutBorders(this.#gameArea));
     }
 
     const screenContent = composeOver(
       this.#currentBlock.to2DArray(),
-      gameAreaWithoutBorders,
+      this.#gameArea,
       this.#currentBlockLocation,
     );
 
-    return stringFrom2DArray(screenContent);
+    return stringFrom2DArray(withoutBorders(screenContent));
   }
 
   drop(block) {
