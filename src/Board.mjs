@@ -60,7 +60,6 @@ export class Board {
       let blockBottomMargin = 0;
       while (blockBottomMargin < currentBlock.length &&
           blockHeight > 0 && currentBlock[currentBlock.length - blockBottomMargin - 1].match(/^[.]+$/)) {
-        --blockHeight;
         ++blockBottomMargin;
       }
 
