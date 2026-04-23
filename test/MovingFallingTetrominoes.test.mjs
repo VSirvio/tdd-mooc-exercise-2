@@ -207,4 +207,27 @@ describe("A falling tetromino", () => {
        ...TTT....`
     );
   });
+
+  test("cannot be moved down through other blocks", () => {
+    board.drop(Tetromino.T_SHAPE);
+    board.moveLeft();
+    board.moveLeft();
+    for (let i = 0; i < 5; ++i) {
+      board.tick();
+    }
+
+    board.drop(Tetromino.T_SHAPE);
+    for (let i = 0; i < 4; ++i) {
+      board.moveDown();
+    }
+
+    expect(board.toString()).to.equalShape(
+      `..........
+       ..........
+       ..........
+       ....T.....
+       ..TTTT....
+       .TTT......`
+    );
+  });
 });
