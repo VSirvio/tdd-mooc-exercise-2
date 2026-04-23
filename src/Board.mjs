@@ -64,7 +64,7 @@ export class Board {
         ++blockBottomMargin;
       }
 
-      if (y === this.height - blockHeight ||
+      if (y === this.height - currentBlock.length + blockBottomMargin ||
           !this.gameArea[y + blockHeight].slice(x, x + currentBlock[0].length)
             .join('').match(/^[.]+$/)) {
 
