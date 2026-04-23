@@ -99,7 +99,7 @@ export class Board {
   }
 
   hasFalling() {
-    return this.#currentBlockLocation2 !== undefined;
+    return this.#currentBlockLocation !== undefined;
   }
 
   moveLeft() {
