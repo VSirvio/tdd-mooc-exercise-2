@@ -61,8 +61,6 @@ export class Board {
     if (this.#currentBlockLocation) {
       const currentBlock = this.#currentBlock.to2DArray();
 
-      let blockBottomMargin = bottomMargin(currentBlock);
-
       if (this.#collides(0, 1)) {
         this.#gameArea = composeOver(
           currentBlock,
