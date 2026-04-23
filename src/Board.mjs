@@ -2,7 +2,6 @@ import { SingleBlock } from "./SingleBlock.mjs";
 import { bottomMargin, composeOver, stringFrom2DArray } from "./utils.mjs";
 
 export class Board {
-  width;
   height;
   currentBlock;
   currentBlockLocation;
