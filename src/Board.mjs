@@ -83,7 +83,7 @@ export class Board {
   }
 
   hasFalling() {
-    return this.currentBlockLocation !== undefined;
+    return this.#currentBlockLocation !== undefined;
   }
 
   moveLeft() {
