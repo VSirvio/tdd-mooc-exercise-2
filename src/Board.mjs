@@ -84,7 +84,6 @@ export class Board {
   }
 
   #collides(dx, dy) {
-    const [blockX, blockY] = this.#currentBlockLocation;
     const blockX2 = this.#currentBlockLocation2.getX();
     const blockY2 = this.#currentBlockLocation2.getY();
     const currentBlock = this.#currentBlock.to2DArray();
