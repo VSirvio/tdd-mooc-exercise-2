@@ -113,4 +113,7 @@ export class Board {
       this.#currentBlockLocation[1] += 1;
     }
   }
+
+  rotateRight() {
+  }
 }
