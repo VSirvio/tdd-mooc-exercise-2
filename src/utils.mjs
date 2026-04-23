@@ -1,3 +1,6 @@
+export function bottomMargin(arr) {
+}
+
 export function composeOver(overlay, background, overlayLocation) {
   const [overlayX, overlayY] = overlayLocation;
 
