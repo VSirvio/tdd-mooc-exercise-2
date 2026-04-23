@@ -10,7 +10,7 @@ export class Board {
   constructor(width, height) {
     this.height = height;
 
-    this.gameArea = new Array(this.height);
+    this.gameArea = new Array(height);
     for (let y = 0; y < this.height; ++y) {
       this.gameArea[y] = new Array(width);
       for (let x = 0; x < width; ++x) {
