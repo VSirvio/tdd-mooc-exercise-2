@@ -14,7 +14,6 @@ export class Board {
       this.gameArea[y] = new Array(width);
       this.#gameArea[y] = new Array(width);
       for (let x = 0; x < width; ++x) {
-        this.gameArea[y][x] = '.';
         this.#gameArea[y][x] = '.';
       }
     }
