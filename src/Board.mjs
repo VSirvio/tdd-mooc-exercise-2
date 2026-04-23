@@ -61,6 +61,7 @@ export class Board {
       while (blockBottomMargin < currentBlock.length &&
           blockHeight > 0 && currentBlock[blockHeight - 1].match(/^[.]+$/)) {
         --blockHeight;
+        ++blockBottomMargin;
       }
 
       if (y === this.height - blockHeight ||
