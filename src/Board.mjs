@@ -1,3 +1,4 @@
+import { Coord2D } from "./Coord2D.mjs";
 import { SingleBlock } from "./SingleBlock.mjs";
 
 import {
