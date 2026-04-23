@@ -21,6 +21,9 @@ export class Board {
     }
   }
 
+  getWidth() {
+  }
+
   toString() {
     if (this.currentBlockLocation === undefined) {
       return stringFrom2DArray(this.gameArea);
