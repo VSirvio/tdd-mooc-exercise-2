@@ -1,5 +1,12 @@
 import { SingleBlock } from "./SingleBlock.mjs";
-import { bottomMargin, composeOver, stringFrom2DArray, withoutBorders } from "./utils.mjs";
+
+import {
+  bottomMargin,
+  composeOver,
+  stringFrom2DArray,
+  withoutBorders,
+} from "./utils.mjs";
+
 
 export class Board {
   #currentBlock;
