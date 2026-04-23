@@ -59,8 +59,6 @@ export class Board {
 
   tick() {
     if (this.#currentBlockLocation) {
-      const currentBlock = this.#currentBlock.to2DArray();
-
       if (this.#collides(0, 1)) {
         this.#gameArea = composeOver(
           this.#currentBlock.to2DArray(),
