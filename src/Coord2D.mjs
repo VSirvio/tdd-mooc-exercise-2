@@ -11,6 +11,10 @@ export class Coord2D {
     return this.#x;
   }
 
+  getY() {
+    return this.#y;
+  }
+
   movedBy(dx, dy) {
     return new Coord2D(this.#x + dx, this.#y + dy);
   }
