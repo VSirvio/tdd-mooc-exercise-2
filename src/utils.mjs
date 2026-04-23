@@ -1,4 +1,10 @@
-export function bottomMargin(arr) {
+export function bottomMargin(currentBlock) {
+  let blockBottomMargin = 0;
+  while (blockBottomMargin < currentBlock.length &&
+      currentBlock[currentBlock.length - blockBottomMargin - 1].match(/^[.]+$/)) {
+    ++blockBottomMargin;
+  }
+  return blockBottomMargin;
 }
 
 export function composeOver(overlay, background, overlayLocation) {

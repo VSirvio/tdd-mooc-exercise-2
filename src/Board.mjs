@@ -1,5 +1,5 @@
 import { SingleBlock } from "./SingleBlock.mjs";
-import { composeOver, stringFrom2DArray } from "./utils.mjs";
+import { bottomMargin, composeOver, stringFrom2DArray } from "./utils.mjs";
 
 export class Board {
   width;
@@ -61,6 +61,7 @@ export class Board {
           currentBlock[currentBlock.length - blockBottomMargin - 1].match(/^[.]+$/)) {
         ++blockBottomMargin;
       }
+      let blockBottomMargin2 = bottomMargin(currentBlock);
 
       if (y === this.height - currentBlock.length + blockBottomMargin ||
           !this.gameArea[y + currentBlock.length - blockBottomMargin].slice(x, x + currentBlock[0].length)
