@@ -177,4 +177,9 @@ describe("A falling tetromino", () => {
        .....TTT..`
     );
   });
+
+  test("can be moved down", () => {
+    board.drop(Tetromino.T_SHAPE);
+    board.moveDown();
+  });
 });
