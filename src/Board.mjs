@@ -28,7 +28,7 @@ export class Board {
     const gameAreaWithoutBorders = this.#gameArea;
 
     if (this.#currentBlockLocation === undefined) {
-      return stringFrom2DArray(this.#gameArea);
+      return stringFrom2DArray(gameAreaWithoutBorders);
     }
 
     const screenContent = composeOver(
