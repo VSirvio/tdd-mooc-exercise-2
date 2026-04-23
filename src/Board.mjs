@@ -71,7 +71,7 @@ export class Board {
         this.#gameArea = composeOver(
           this.#currentBlock.to2DArray(),
           this.#gameArea,
-          this.#currentBlockLocation2,
+          this.#currentBlockLocation,
         );
 
         this.#currentBlockLocation = undefined;
