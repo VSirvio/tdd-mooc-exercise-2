@@ -25,7 +25,7 @@ export class Board {
   }
 
   toString() {
-    const gameAreaWithoutBorders = this.#gameArea.slice(0, -1);
+    const gameAreaWithoutBorders = this.#gameArea;
 
     if (this.#currentBlockLocation === undefined) {
       return stringFrom2DArray(this.#gameArea);
