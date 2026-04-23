@@ -33,7 +33,7 @@ export class Board {
     const screenContent = composeOver(
       this.#currentBlock.to2DArray(),
       this.#gameArea,
-      this.currentBlockLocation,
+      this.#currentBlockLocation,
     );
 
     return stringFrom2DArray(screenContent);
