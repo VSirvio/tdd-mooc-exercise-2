@@ -59,7 +59,7 @@ export class Board {
       let blockBottomMargin = bottomMargin(currentBlock);
       let blockBottomMargin2 = bottomMargin(currentBlock);
 
-      if (y === this.height - currentBlock.length + blockBottomMargin2 ||
+      if (y === this.height - currentBlock.length + blockBottomMargin ||
           !this.gameArea[y + currentBlock.length - blockBottomMargin2].slice(x, x + currentBlock[0].length)
             .join('').match(/^[.]+$/)) {
 
