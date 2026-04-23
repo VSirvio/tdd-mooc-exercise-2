@@ -10,6 +10,7 @@ import {
 export class Board {
   #currentBlock;
   #currentBlockLocation;
+  #currentBlockLocation2;
   #gameArea;
 
   constructor(width, height) {
