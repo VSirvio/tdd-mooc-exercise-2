@@ -109,7 +109,7 @@ export class Board {
   }
 
   moveRight() {
-    if (!this.#collides(1, 0, this.#currentBlock, this.#currentBlockLocation.movedBy(1, 0))) {
+    if (!this.#overlaps(this.#currentBlock, this.#currentBlockLocation.movedBy(1, 0))) {
       this.#currentBlockLocation = this.#currentBlockLocation.movedBy(1, 0);
     }
   }
