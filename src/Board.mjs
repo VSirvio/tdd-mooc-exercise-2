@@ -1,7 +1,6 @@
 import { SingleBlock } from "./SingleBlock.mjs";
 
 import {
-  bottomMargin,
   composeOver,
   stringFrom2DArray,
   withoutBorders,

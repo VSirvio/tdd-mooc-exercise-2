@@ -1,11 +1,3 @@
-export function bottomMargin(arr) {
-  let margin = 0;
-  while (margin < arr.length && arr[arr.length - margin - 1].match(/^[.]+$/)) {
-    ++margin;
-  }
-  return margin;
-}
-
 export function composeOver(overlay, background, overlayLocation) {
   const [overlayX, overlayY] = overlayLocation;
 
