@@ -21,7 +21,7 @@ export class Board {
   }
 
   getWidth() {
-    return this.gameArea[0].length;
+    return this.#gameArea[0].length;
   }
 
   getHeight() {
