@@ -9,7 +9,6 @@ export class Board {
   gameArea;
 
   constructor(width, height) {
-    this.width = width;
     this.height = height;
 
     this.gameArea = new Array(this.height);
