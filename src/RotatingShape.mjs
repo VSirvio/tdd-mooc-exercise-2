@@ -14,6 +14,7 @@ export class RotatingShape {
 
   constructor(initCharacters) {
     this.characters = initCharacters.map(row => [...row]);
+    this.#characters = initCharacters.map(row => [...row]);
   }
 
   toString() {
