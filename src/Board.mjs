@@ -65,7 +65,7 @@ export class Board {
 
   tick() {
     if (this.#currentBlockLocation) {
-      if (this.#collides(0, 1, this.#currentBlock, this.#currentBlockLocation.movedBy(0, 1))) {
+      if (this.#overlaps(this.#currentBlock, this.#currentBlockLocation.movedBy(0, 1))) {
         this.#gameArea = composeOver(
           this.#currentBlock.to2DArray(),
           this.#gameArea,
