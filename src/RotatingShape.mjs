@@ -18,7 +18,7 @@ export class RotatingShape {
   }
 
   toString() {
-    return stringFrom2DArray(this.characters);
+    return stringFrom2DArray(this.#characters);
   }
 
   rotateRight() {
