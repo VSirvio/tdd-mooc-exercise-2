@@ -65,7 +65,7 @@ export class Board {
       }
 
       if (y === this.height - currentBlock.length + blockBottomMargin ||
-          !this.gameArea[y + blockHeight].slice(x, x + currentBlock[0].length)
+          !this.gameArea[y + currentBlock.length - blockBottomMargin].slice(x, x + currentBlock[0].length)
             .join('').match(/^[.]+$/)) {
 
         this.gameArea = composeOver(
