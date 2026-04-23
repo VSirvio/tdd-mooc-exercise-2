@@ -77,6 +77,7 @@ export class Board {
         this.#currentBlockLocation = undefined;
         this.#currentBlockLocation2 = undefined;
       } else {
+        this.#currentBlockLocation = this.#currentBlockLocation2.movedBy(0, 1);
         this.#currentBlockLocation2 = this.#currentBlockLocation2.movedBy(0, 1);
       }
     }
