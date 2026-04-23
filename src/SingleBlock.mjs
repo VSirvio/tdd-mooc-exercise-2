@@ -1,6 +1,5 @@
 export class SingleBlock {
     #character;
-    character;
 
     constructor(character) {
         this.#character = character;
