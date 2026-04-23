@@ -43,7 +43,6 @@ export class Board {
       this.#currentBlock.to2DArray(),
       this.#gameArea,
       this.#currentBlockLocation2,
-      this.#currentBlockLocation2,
     );
 
     return stringFrom2DArray(withoutBorders(screenContent));
