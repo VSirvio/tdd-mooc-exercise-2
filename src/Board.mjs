@@ -70,7 +70,7 @@ export class Board {
         this.#gameArea = composeOver(
           currentBlock,
           this.#gameArea,
-          this.currentBlockLocation,
+          this.#currentBlockLocation,
         );
 
         this.#currentBlockLocation = undefined;
