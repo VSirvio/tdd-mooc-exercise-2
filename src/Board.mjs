@@ -63,7 +63,7 @@ export class Board {
 
       if (this.#collides(0, 1)) {
         this.#gameArea = composeOver(
-          currentBlock,
+          this.#currentBlock.to2DArray(),
           this.#gameArea,
           this.#currentBlockLocation,
         );
