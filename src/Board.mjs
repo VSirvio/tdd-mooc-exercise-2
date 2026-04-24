@@ -120,7 +120,10 @@ export class Board {
   }
 
   #rotate(direction) {
-    const rotatedBlock = this.#currentBlock.rotateRight();
+    const rotatedBlock = direction === 'right' ?
+      this.#currentBlock.rotateRight() :
+      this.#currentBlock.rotateLeft();
+
     if (!this.#overlaps(rotatedBlock, this.#currentBlockLocation)) {
       this.#currentBlock = rotatedBlock;
     }
