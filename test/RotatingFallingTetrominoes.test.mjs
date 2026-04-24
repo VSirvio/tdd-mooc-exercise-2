@@ -39,4 +39,9 @@ describe("A falling tetromino", () => {
        ...TTT....`
     );
   });
+
+  test("can be rotated left", () => {
+    board.drop(Tetromino.T_SHAPE);
+    board.rotateLeft();
+  });
 });

@@ -127,4 +127,7 @@ export class Board {
       this.#currentBlock = rotatedBlock;
     }
   }
+
+  rotateLeft() {
+  }
 }
