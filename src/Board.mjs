@@ -129,5 +129,6 @@ export class Board {
   }
 
   rotateLeft() {
+    this.#currentBlock = this.#currentBlock.rotateLeft();
   }
 }
