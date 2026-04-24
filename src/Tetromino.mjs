@@ -33,7 +33,7 @@ export class Tetromino {
   #characterMatrices;
 
   constructor(characterMatrices) {
-    this.#characterMatrices = [...characterMatrices];
+    this.#characterMatrices = duplicateOf(characterMatrices);
   }
 
   toString() {
