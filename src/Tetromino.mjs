@@ -28,7 +28,6 @@ export class Tetromino {
     `.OO
      .OO
      ...`,
-     1
   );
 
   static fromString(initString, orientationCount) {
