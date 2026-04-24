@@ -16,12 +16,11 @@ export class Tetromino {
   );
 
   static I_SHAPE = Tetromino.fromString(
-    `.....
-     .....
-     IIII.
-     .....
-     .....`,
-     2
+    `..... ..I..
+     ..... ..I..
+     IIII. ..I..
+     ..... ..I..
+     ..... .....`,
   );
 
   static O_SHAPE = Tetromino.fromString(
