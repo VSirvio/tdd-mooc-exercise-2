@@ -30,7 +30,6 @@ export class Tetromino {
     return new Tetromino(multiple2DArraysFromString(initString));
   }
 
-  #rotatingShapes;
   #characterMatrices;
 
   constructor(rotatingShapes) {
