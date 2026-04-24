@@ -39,7 +39,7 @@ export class Tetromino {
   }
 
   toString() {
-    return stringFrom2DArray(this.#rotatingShapes[0]);
+    return stringFrom2DArray(this.#characterMatrices[0]);
   }
 
   to2DArray() {
