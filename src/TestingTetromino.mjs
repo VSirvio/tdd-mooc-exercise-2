@@ -1,6 +1,6 @@
 import { Tetromino } from "./Tetromino.mjs";
 
-export default {
+export const TestingTetromino = {
   T_SHAPE: Tetromino.fromString(
     `.T. .T. ... .T.
      TTT .TT TTT TT.
