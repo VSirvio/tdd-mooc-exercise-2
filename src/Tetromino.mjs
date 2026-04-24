@@ -29,15 +29,7 @@ export class Tetromino {
   );
 
   static fromString(initString, orientationCount) {
-    if (orientationCount) {
-      const rotatingShapes = [RotatingShape.fromString(initString)];
-      for (let i = 0; i < orientationCount - 1; ++i) {
-        rotatingShapes.push(RotatingShape.fromString(rotatingShapes.at(-1).rotateRight()));
-      }
-      return new Tetromino(rotatingShapes);
-    } else {
-      return new Tetromino(multiple2DArraysFromString(initString));
-    }
+    return new Tetromino(multiple2DArraysFromString(initString));
   }
 
   #rotatingShapes;
