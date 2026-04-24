@@ -14,7 +14,8 @@ export function composeOver(overlay, background, overlayLocation) {
   return result;
 }
 
-export function duplicateOf() {
+export function duplicateOf(arr) {
+  return arr.map(row => [...row]);
 }
 
 export function stringFrom2DArray(arr) {
