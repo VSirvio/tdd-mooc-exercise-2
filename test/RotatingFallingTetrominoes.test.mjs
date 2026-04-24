@@ -53,4 +53,21 @@ describe("A falling tetromino", () => {
        ..........`
     );
   });
+
+  test("cannot be rotated left when there is no room to rotate", () => {
+    board.drop(Tetromino.T_SHAPE);
+    for (let i = 0; i < 4; ++i) {
+        board.tick();
+    }
+    board.rotateLeft();
+
+    expect(board.toString()).to.equalShape(
+      `..........
+       ..........
+       ..........
+       ..........
+       ....T.....
+       ...TTT....`
+    );
+  });
 });
