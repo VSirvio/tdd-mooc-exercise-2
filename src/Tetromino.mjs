@@ -32,6 +32,7 @@ export class Tetromino {
         rotatingShapes.push(RotatingShape.fromString(rotatingShapes.at(-1).rotateRight()));
       }
       return new Tetromino(rotatingShapes);
+    } else {
     }
   }
 
