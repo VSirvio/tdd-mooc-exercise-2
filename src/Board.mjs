@@ -112,10 +112,7 @@ export class Board {
   }
 
   moveRight() {
-    const newLocation = this.#currentBlockLocation.movedBy(1, 0);
-    if (!this.#overlaps(this.#currentBlock, newLocation)) {
-      this.#currentBlockLocation = newLocation;
-    }
+    this.#move(1, 0);
   }
 
   moveDown() {
