@@ -100,7 +100,7 @@ export class Board {
     return this.#currentBlockLocation !== undefined;
   }
 
-  #move() {
+  #move(dx, dy) {
   }
 
   moveLeft() {
