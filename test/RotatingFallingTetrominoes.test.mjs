@@ -91,4 +91,25 @@ describe("A falling tetromino", () => {
        ...TTT....`
     );
   });
+
+  test("is tried to be moved 1 unit to the left when rotating and there is no room to rotate (wall kick)", () => {
+    board.drop(Tetromino.O_SHAPE);
+    for (let i = 0; i < 5; ++i) {
+      board.tick();
+    }
+
+    board.drop(Tetromino.T_SHAPE);
+    board.tick();
+    board.tick();
+    board.rotateLeft();
+
+    expect(board.toString()).to.equalShape(
+      `..........
+       ..........
+       ...T......
+       ..TT......
+       ...TOO....
+       ....OO....`
+    );
+  });
 });

@@ -127,10 +127,16 @@ export class Board {
     if (!this.#overlaps(rotatedBlock, this.#currentBlockLocation)) {
       this.#currentBlock = rotatedBlock;
     } else {
-      const newLocation = this.#currentBlockLocation.movedBy(1, 0);
-      if (!this.#overlaps(rotatedBlock, newLocation)) {
-        this.#currentBlock = rotatedBlock;
-        this.#currentBlockLocation = newLocation;
+      const newLocationsToTry = [
+        this.#currentBlockLocation.movedBy(1, 0),
+        this.#currentBlockLocation.movedBy(-1, 0),
+      ];
+      for (const newLocation of newLocationsToTry) {
+        if (!this.#overlaps(rotatedBlock, newLocation)) {
+          this.#currentBlock = rotatedBlock;
+          this.#currentBlockLocation = newLocation;
+          break;
+        }
       }
     }
   }
