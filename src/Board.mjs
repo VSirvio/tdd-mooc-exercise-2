@@ -101,6 +101,10 @@ export class Board {
   }
 
   #move(dx, dy) {
+    const newLocation = this.#currentBlockLocation.movedBy(dx, dy);
+    if (!this.#overlaps(this.#currentBlock, newLocation)) {
+      this.#currentBlockLocation = newLocation;
+    }
   }
 
   moveLeft() {
