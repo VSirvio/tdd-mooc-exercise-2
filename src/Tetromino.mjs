@@ -45,7 +45,10 @@ export class Tetromino {
   }
 
   rotateRight() {
-    return new Tetromino([...this.#characterMatrices.slice(1), this.#characterMatrices[0]]);
+    return new Tetromino([
+      ...this.#characterMatrices.slice(1),
+      this.#characterMatrices[0],
+    ]);
   }
 
   rotateLeft() {
