@@ -28,7 +28,7 @@ export class Tetromino {
      ...`,
   );
 
-  static fromString(initString, orientationCount) {
+  static fromString(initString) {
     return new Tetromino(multiple2DArraysFromString(initString));
   }
 
