@@ -19,6 +19,7 @@ export function duplicateOf(arr) {
 }
 
 export function multiple2DArraysFromString(str) {
+  const lines = str.split("\n").trim();
 }
 
 export function stringFrom2DArray(arr) {
