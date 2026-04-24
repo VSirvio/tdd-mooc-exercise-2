@@ -26,11 +26,13 @@ export class Tetromino {
   );
 
   static fromString(initString, orientationCount) {
-    const rotatingShapes = [RotatingShape.fromString(initString)];
-    for (let i = 0; i < orientationCount - 1; ++i) {
-      rotatingShapes.push(RotatingShape.fromString(rotatingShapes.at(-1).rotateRight()));
+    if (orientationCount) {
+      const rotatingShapes = [RotatingShape.fromString(initString)];
+      for (let i = 0; i < orientationCount - 1; ++i) {
+        rotatingShapes.push(RotatingShape.fromString(rotatingShapes.at(-1).rotateRight()));
+      }
+      return new Tetromino(rotatingShapes);
     }
-    return new Tetromino(rotatingShapes);
   }
 
   #rotatingShapes;
