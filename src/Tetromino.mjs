@@ -2,6 +2,7 @@ import { RotatingShape } from "./RotatingShape.mjs";
 
 import {
   duplicateOf,
+  multiple2DArraysFromString,
   stringFrom2DArray,
 } from "./utils.mjs";
 
