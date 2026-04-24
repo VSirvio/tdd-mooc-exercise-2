@@ -52,6 +52,9 @@ export class Tetromino {
   }
 
   rotateLeft() {
-    return new Tetromino([this.#characterMatrices.at(-1), ...this.#characterMatrices.slice(0, -1)]);
+    return new Tetromino([
+      this.#characterMatrices.at(-1),
+      ...this.#characterMatrices.slice(0, -1),
+    ]);
   }
 }
