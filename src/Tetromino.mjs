@@ -32,8 +32,7 @@ export class Tetromino {
 
   #characterMatrices;
 
-  constructor(rotatingShapes) {
-    const characterMatrices = rotatingShapes;
+  constructor(characterMatrices) {
     this.#characterMatrices = [...characterMatrices];
   }
 
