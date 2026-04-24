@@ -43,7 +43,7 @@ export class Tetromino {
   }
 
   to2DArray() {
-    return duplicateOf(this.#rotatingShapes[0]);
+    return duplicateOf(this.#characterMatrices[0]);
   }
 
   rotateRight() {
