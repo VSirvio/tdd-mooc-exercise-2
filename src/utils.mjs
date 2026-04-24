@@ -18,6 +18,9 @@ export function duplicateOf(arr) {
   return arr.map(row => [...row]);
 }
 
+export function multiple2DArraysFromString(str) {
+}
+
 export function stringFrom2DArray(arr) {
   return arr.map(row => row.join("")).join("\n") + "\n";
 }
