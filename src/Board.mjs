@@ -134,9 +134,6 @@ export class Board {
   }
 
   rotateLeft() {
-    const rotatedBlock = this.#currentBlock.rotateLeft();
-    if (!this.#overlaps(rotatedBlock, this.#currentBlockLocation)) {
-      this.#currentBlock = rotatedBlock;
-    }
+    this.#rotate('left');
   }
 }
