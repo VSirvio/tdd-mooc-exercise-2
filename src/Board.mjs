@@ -119,6 +119,9 @@ export class Board {
     this.#move(0, 1);
   }
 
+  #rotate() {
+  }
+
   rotateRight() {
     const rotatedBlock = this.#currentBlock.rotateRight();
     if (!this.#overlaps(rotatedBlock, this.#currentBlockLocation)) {
