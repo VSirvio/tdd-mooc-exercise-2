@@ -13,4 +13,9 @@ export default {
      ..... ..I..
      ..... .....`,
   ),
+  O_SHAPE: Tetromino.fromString(
+    `.OO
+     .OO
+     ...`,
+  ),
 };
