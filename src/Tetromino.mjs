@@ -48,9 +48,7 @@ export class Tetromino {
   }
 
   toString() {
-    return this.#rotatingShapes[0] instanceof RotatingShape ?
-      this.#rotatingShapes[0].toString() :
-      stringFrom2DArray(this.#rotatingShapes[0]);
+    return stringFrom2DArray(this.#rotatingShapes[0]);
   }
 
   to2DArray() {
