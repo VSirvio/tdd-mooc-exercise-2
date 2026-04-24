@@ -6,4 +6,11 @@ export default {
      TTT .TT TTT TT.
      ... .T. .T. .T.`,
   ),
+  I_SHAPE: Tetromino.fromString(
+    `..... ..I..
+     ..... ..I..
+     IIII. ..I..
+     ..... ..I..
+     ..... .....`,
+  ),
 };
