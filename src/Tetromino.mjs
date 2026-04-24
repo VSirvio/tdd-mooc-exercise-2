@@ -39,6 +39,7 @@ export class Tetromino {
       }
       return new Tetromino(rotatingShapes);
     } else {
+      return new Tetromino(multiple2DArraysFromString(initString));
     }
   }
 
