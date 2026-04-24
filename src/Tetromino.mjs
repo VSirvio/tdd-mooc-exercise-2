@@ -1,5 +1,5 @@
 import { RotatingShape } from "./RotatingShape.mjs";
-import { stringFrom2DArray } from "./utils.mjs";
+import { duplicateOf, stringFrom2DArray } from "./utils.mjs";
 
 export class Tetromino {
   static T_SHAPE = Tetromino.fromString(
