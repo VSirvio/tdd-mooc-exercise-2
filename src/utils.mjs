@@ -17,6 +17,8 @@ export function composeOver(overlay, background, overlayLocation) {
 export function duplicateOf(arr) {
   if (Array.isArray(arr[0])) {
     return arr.map(row => [...row]);
+  } else {
+    return [...arr];
   }
 }
 
