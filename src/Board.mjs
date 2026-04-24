@@ -119,7 +119,7 @@ export class Board {
     this.#move(0, 1);
   }
 
-  #rotate() {
+  #rotate(direction) {
   }
 
   rotateRight() {
