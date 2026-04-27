@@ -49,4 +49,13 @@ describe("The scoring system", () => {
     }
     expect(scoring.level).to.equal(3);
   });
+
+  test("awards 80 pts for 1 line cleared on level 2", () => {
+    for (let i = 0; i < 10; ++i) {
+      scoring.linesCleared(1);
+    }
+    const scoreBefore = scoring.score;
+    scoring.linesCleared(1);
+    expect(scoring.score - scoreBefore).to.equal(80);
+  });
 });

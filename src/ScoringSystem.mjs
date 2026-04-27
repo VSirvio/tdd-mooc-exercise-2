@@ -11,7 +11,7 @@ export class ScoringSystem {
     } else if (numOfLines === 4) {
       this.score += 1200;
     } else {
-      this.score += 40;
+      this.score += 40 * this.level;
     }
 
     this.linesClearedCount += numOfLines;
