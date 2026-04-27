@@ -78,6 +78,11 @@ export class Board {
         );
 
         this.#currentBlockLocation = undefined;
+
+        if (this.#gameArea.at(-2).every(ch => ch !== '.')) {
+          this.#gameArea.splice(-2, 1);
+          this.#gameArea.unshift(['#', ...Array(this.getWidth() - 2).fill('.'), '#']);
+        }
       } else {
         this.#currentBlockLocation = newLocation;
       }
