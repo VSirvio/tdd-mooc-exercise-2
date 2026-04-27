@@ -42,4 +42,36 @@ describe("The board", () => {
        .T..T.....`
     );
   });
+
+  test("clears any row when it becomes full", () => {
+    board.drop(TestingTetromino.I_SHAPE);
+    board.moveRight();
+    fallToBottom(board);
+
+    board.drop(TestingTetromino.I_SHAPE);
+    fallToBottom(board);
+
+    board.drop(TestingTetromino.I_SHAPE);
+    for (let i = 0; i < 4; ++i) {
+      board.moveRight();
+    }
+    fallToBottom(board);
+
+    board.drop(TestingTetromino.O_SHAPE);
+    for (let i = 0; i < 4; ++i) {
+      board.moveLeft();
+    }
+    for (let i = 0; i < 5; ++i) {
+      board.tick();
+    }
+
+    expect(board.toString()).to.equalShape(
+      `..........
+       ..........
+       ..........
+       ..........
+       ..........
+       OO.IIII...`
+    );
+  });
 });
