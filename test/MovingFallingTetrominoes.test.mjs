@@ -57,7 +57,7 @@ describe("A falling tetromino", () => {
   });
 
   test("can reach the bottom when there is already a block", () => {
-    board.drop(Tetromino.T_SHAPE);
+    board.drop(TestingTetromino.T_SHAPE);
     for (let i = 0; i < 3; ++i) {
       board.moveLeft();
     }
