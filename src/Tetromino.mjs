@@ -49,10 +49,10 @@ export class Tetromino {
   );
 
   static Z_SHAPE = Tetromino.fromString(
-    `....
-     ZZ..
-     .ZZ.
-     ....`,
+    `.... ..Z.
+     ZZ.. .ZZ.
+     .ZZ. .Z..
+     .... ....`,
   );
 
   static fromString(initString) {
