@@ -9,7 +9,7 @@ export class ScoringSystem {
     } else if (numOfLines === 3) {
       this.score += 300 * this.level;
     } else if (numOfLines === 4) {
-      this.score += 1200;
+      this.score += 1200 * this.level;
     } else {
       this.score += 40 * this.level;
     }
