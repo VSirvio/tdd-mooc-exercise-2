@@ -48,6 +48,13 @@ export class Tetromino {
      .... ....`,
   );
 
+  static Z_SHAPE = Tetromino.fromString(
+    `....
+     ZZ..
+     .ZZ.
+     ....`,
+  );
+
   static fromString(initString) {
     return new Tetromino(multiple2DArraysFromString(initString));
   }
