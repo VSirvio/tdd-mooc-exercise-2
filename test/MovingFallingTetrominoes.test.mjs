@@ -81,7 +81,7 @@ describe("A falling tetromino", () => {
   });
 
   test("with O shape can fall on top of T shape diagonally", () => {
-    board.drop(Tetromino.T_SHAPE);
+    board.drop(TestingTetromino.T_SHAPE);
     board.moveLeft();
     for (let i = 0; i < 5; ++i) {
       board.tick();
