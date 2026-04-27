@@ -15,4 +15,8 @@ describe("The scoring system", () => {
   test("starts with level 1", () => {
     expect(scoring.level).to.equal(1);
   });
+
+  test("awards 40 pts for the 1st line cleared", () => {
+    scoring.linesCleared(1);
+  });
 });
