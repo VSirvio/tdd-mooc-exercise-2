@@ -255,4 +255,8 @@ describe("The Z shape", () => {
        ....`
     );
   });
+
+  test("has 2 distinct orientations", () => {
+    expect(distinctOrientations(shape).size).to.equal(2);
+  });
 });
