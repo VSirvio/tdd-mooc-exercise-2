@@ -60,7 +60,10 @@ export class Board {
     const blockWidth = blockObject.toString().indexOf("\n");
 
     this.#currentBlock = blockObject;
-    this.#currentBlockLocation = new Coord2D(Math.floor((this.getWidth() - blockWidth) / 2), 0);
+    this.#currentBlockLocation = new Coord2D(
+      Math.floor((this.getWidth() - blockWidth) / 2),
+      blockWidth === 4 ? -1 : 0,
+    );
   }
 
   tick() {
