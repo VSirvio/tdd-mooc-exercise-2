@@ -211,4 +211,13 @@ describe("The S shape", () => {
        ....`
     );
   });
+
+  test("can be rotated left/counter-clockwise", () => {
+    expect(shape.rotateLeft().toString()).to.equalShape(
+      `S...
+       SS..
+       .S..
+       ....`
+    );
+  });
 });
