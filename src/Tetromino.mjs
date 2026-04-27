@@ -28,10 +28,10 @@ export class Tetromino {
   );
 
   static L_SHAPE = Tetromino.fromString(
-    `....
-     LLL.
-     L...
-     ....`,
+    `.... LL..
+     LLL. .L..
+     L... .L..
+     .... ....`,
   );
 
   static fromString(initString) {
