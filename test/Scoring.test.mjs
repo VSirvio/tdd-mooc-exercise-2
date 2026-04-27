@@ -1,15 +1,18 @@
-import { describe, test } from "vitest";
+import { beforeEach, describe, test } from "vitest";
 import { expect } from "chai";
 import { ScoringSystem } from "../src/ScoringSystem.mjs";
 
 describe("The scoring system", () => {
+  let scoring;
+  beforeEach(() => {
+    scoring = new ScoringSystem();
+  });
+
   test("starts with score 0", () => {
-    const scoring = new ScoringSystem();
     expect(scoring.score).to.equal(0);
   });
 
   test("starts with level 1", () => {
-    const scoring = new ScoringSystem();
     expect(scoring.level).to.equal(1);
   });
 });
