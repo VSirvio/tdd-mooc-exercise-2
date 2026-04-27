@@ -42,10 +42,10 @@ export class Tetromino {
   );
 
   static S_SHAPE = Tetromino.fromString(
-    `....
-     .SS.
-     SS..
-     ....`,
+    `.... S...
+     .SS. SS..
+     SS.. .S..
+     .... ....`,
   );
 
   static fromString(initString) {
