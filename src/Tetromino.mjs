@@ -21,9 +21,10 @@ export class Tetromino {
   );
 
   static O_SHAPE = Tetromino.fromString(
-    `.OO
-     .OO
-     ...`,
+    `....
+     .OO.
+     .OO.
+     ....`,
   );
 
   static fromString(initString) {
