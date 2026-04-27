@@ -41,7 +41,7 @@ describe("A falling tetromino", () => {
   });
 
   test("that is O shaped cannot be moved left beyond the board", () => {
-    board.drop(Tetromino.O_SHAPE);
+    board.drop(TestingTetromino.O_SHAPE);
     for (let i = 0; i < 5; ++i) {
       board.moveLeft();
     }
