@@ -78,7 +78,7 @@ describe("A falling tetromino", () => {
       board.tick();
     }
 
-    board.drop(Tetromino.T_SHAPE);
+    board.drop(TestingTetromino.T_SHAPE);
     board.tick();
     board.tick();
     board.rotateLeft();
