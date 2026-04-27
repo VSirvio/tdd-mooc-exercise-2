@@ -7,4 +7,9 @@ describe("The scoring system", () => {
     const scoring = new ScoringSystem();
     expect(scoring.score).to.equal(0);
   });
+
+  test("starts with level 1", () => {
+    const scoring = new ScoringSystem();
+    expect(scoring.level).to.equal(1);
+  });
 });
