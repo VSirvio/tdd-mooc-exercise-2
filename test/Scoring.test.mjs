@@ -20,4 +20,9 @@ describe("The scoring system", () => {
     scoring.linesCleared(1);
     expect(scoring.score).to.equal(40);
   });
+
+  test("awards 100 pts when 2 lines are cleared in the beginning", () => {
+    scoring.linesCleared(2);
+    expect(scoring.score).to.equal(100);
+  });
 });
