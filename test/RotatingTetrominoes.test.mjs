@@ -246,4 +246,13 @@ describe("The Z shape", () => {
        ....`
     );
   });
+
+  test("can be rotated left/counter-clockwise", () => {
+    expect(shape.rotateLeft().toString()).to.equalShape(
+      `..Z.
+       .ZZ.
+       .Z..
+       ....`
+    );
+  });
 });
