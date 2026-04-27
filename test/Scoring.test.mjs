@@ -25,4 +25,9 @@ describe("The scoring system", () => {
     scoring.linesCleared(2);
     expect(scoring.score).to.equal(100);
   });
+
+  test("awards 300 pts when 3 lines are cleared in the beginning", () => {
+    scoring.linesCleared(3);
+    expect(scoring.score).to.equal(300);
+  });
 });

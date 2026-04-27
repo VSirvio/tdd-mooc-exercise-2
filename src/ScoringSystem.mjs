@@ -4,7 +4,9 @@ export class ScoringSystem {
 
   linesCleared(numOfLines) {
     if (numOfLines === 2) {
-      this.score += 100
+      this.score += 100;
+    } else if (numOfLines === 3) {
+      this.score += 300;
     } else {
       this.score += 40;
     }
