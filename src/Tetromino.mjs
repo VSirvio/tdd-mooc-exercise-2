@@ -7,10 +7,10 @@ import {
 
 export class Tetromino {
   static T_SHAPE = Tetromino.fromString(
-    `....
-     TTT.
-     .T..
-     ....`,
+    `.... .T..
+     TTT. TT..
+     .T.. .T..
+     .... ....`,
   );
 
   static I_SHAPE = Tetromino.fromString(
