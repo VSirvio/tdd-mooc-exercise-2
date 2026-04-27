@@ -94,7 +94,7 @@ describe("A falling tetromino", () => {
   });
 
   test("is tried to be moved 1 unit to the left when rotating and there is no room to rotate (wall kick)", () => {
-    board.drop(Tetromino.O_SHAPE);
+    board.drop(TestingTetromino.O_SHAPE);
     for (let i = 0; i < 5; ++i) {
       board.tick();
     }
