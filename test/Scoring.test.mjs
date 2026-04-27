@@ -42,4 +42,11 @@ describe("The scoring system", () => {
     }
     expect(scoring.level).to.equal(2);
   });
+
+  test("advances to level 3 after 20 cleared lines", () => {
+    for (let i = 0; i < 20; ++i) {
+      scoring.linesCleared(1);
+    }
+    expect(scoring.level).to.equal(3);
+  });
 });

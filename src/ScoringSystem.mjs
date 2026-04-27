@@ -15,6 +15,6 @@ export class ScoringSystem {
     }
 
     this.linesClearedCount += numOfLines;
-    this.level = this.linesClearedCount >= 10 ? 2 : 1;
+    this.level = Math.floor(this.linesClearedCount / 10) + 1;
   }
 }
