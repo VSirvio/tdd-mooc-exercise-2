@@ -176,4 +176,13 @@ describe("The J shape", () => {
        ....`
     );
   });
+
+  test("can be rotated left/counter-clockwise", () => {
+    expect(shape.rotateLeft().toString()).to.equalShape(
+      `.JJ.
+       .J..
+       .J..
+       ....`
+    );
+  });
 });

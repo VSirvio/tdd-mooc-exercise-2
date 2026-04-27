@@ -35,10 +35,10 @@ export class Tetromino {
   );
 
   static J_SHAPE = Tetromino.fromString(
-    `.... .J..
-     JJJ. .J..
-     ..J. JJ..
-     .... ....`,
+    `.... .J.. .JJ.
+     JJJ. .J.. .J..
+     ..J. JJ.. .J..
+     .... .... ....`,
   );
 
   static fromString(initString) {
