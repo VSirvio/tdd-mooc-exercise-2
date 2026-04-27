@@ -1,6 +1,7 @@
 export class ScoringSystem {
   score = 0;
   level = 1;
+  linesClearedCount = 0;
 
   linesCleared(numOfLines) {
     if (numOfLines === 2) {
@@ -12,5 +13,8 @@ export class ScoringSystem {
     } else {
       this.score += 40;
     }
+
+    this.linesClearedCount += numOfLines;
+    this.level = this.linesClearedCount >= 10 ? 2 : 1;
   }
 }
