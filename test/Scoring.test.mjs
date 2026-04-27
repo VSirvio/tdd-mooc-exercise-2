@@ -18,5 +18,6 @@ describe("The scoring system", () => {
 
   test("awards 40 pts for the 1st line cleared", () => {
     scoring.linesCleared(1);
+    expect(scoring.score).to.equal(40);
   });
 });

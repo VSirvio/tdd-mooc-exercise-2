@@ -3,5 +3,6 @@ export class ScoringSystem {
   level = 1;
 
   linesCleared() {
+    this.score += 40;
   }
 }
