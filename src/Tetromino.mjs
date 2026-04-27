@@ -41,6 +41,13 @@ export class Tetromino {
      .... .... .... ....`,
   );
 
+  static S_SHAPE = Tetromino.fromString(
+    `....
+     .SS.
+     SS..
+     ....`,
+  );
+
   static fromString(initString) {
     return new Tetromino(multiple2DArraysFromString(initString));
   }
