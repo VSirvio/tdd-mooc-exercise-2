@@ -163,7 +163,7 @@ describe("A falling tetromino", () => {
       board.tick();
     }
 
-    board.drop(Tetromino.O_SHAPE);
+    board.drop(TestingTetromino.O_SHAPE);
     for (let i = 0; i < 3; ++i) {
       board.tick();
     }
