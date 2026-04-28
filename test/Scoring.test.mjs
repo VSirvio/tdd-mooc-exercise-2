@@ -1,6 +1,14 @@
 import { beforeEach, describe, test } from "vitest";
 import { expect } from "chai";
+import { Board } from "../src/Board.mjs";
 import { ScoringSystem } from "../src/ScoringSystem.mjs";
+import { TestingTetromino } from "../src/TestingTetromino.mjs";
+
+function fallToBottom(board) {
+  for (let i = 0; i < 10; i++) {
+    board.tick();
+  }
+}
 
 describe("The scoring system", () => {
   let scoring;
@@ -84,5 +92,19 @@ describe("The scoring system", () => {
     const scoreBefore = scoring.score;
     scoring.linesCleared(4);
     expect(scoring.score - scoreBefore).to.equal(2400);
+  });
+});
+
+describe("The board", () => {
+  test("sends out a notification when a line is cleared", () => {
+    const board = new Board(3, 6);
+
+    let calls = 0;
+    board.onClearLine = () => ++calls;
+
+    board.drop(TestingTetromino.T_SHAPE);
+    fallToBottom(board);
+
+    expect(calls).to.equal(1);
   });
 });

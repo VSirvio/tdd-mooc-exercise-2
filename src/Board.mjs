@@ -12,6 +12,7 @@ export class Board {
   #currentBlock;
   #currentBlockLocation;
   #gameArea;
+  onClearLine = () => {};
 
   constructor(width, height) {
     this.#gameArea = new Array(height);
@@ -83,6 +84,7 @@ export class Board {
           if (this.#gameArea[i].every(ch => ch !== '.')) {
             this.#gameArea.splice(i, 1);
             this.#gameArea.unshift(['#', ...Array(this.getWidth() - 2).fill('.'), '#']);
+            this.onClearLine();
           }
         }
       } else {
