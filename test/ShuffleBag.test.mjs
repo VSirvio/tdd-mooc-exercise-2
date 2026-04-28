@@ -29,4 +29,15 @@ describe("Shuffle bag", () => {
       expect(pulledOut).to.have.members(values);
     }
   });
+
+  test("pulls out its values in random order", () => {
+    const values = [1, 5432, 88];
+    const shuffleBag = new ShuffleBag(values);
+    shuffleBag.getRandomNumber = () => 0.19;
+    const pulledOut = [];
+    for (let i = 0; i < values.length; ++i) {
+      pulledOut.push(shuffleBag.next());
+    }
+    expect(pulledOut).to.not.have.ordered.members(values);
+  });
 });
