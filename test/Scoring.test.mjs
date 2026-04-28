@@ -107,4 +107,16 @@ describe("The board", () => {
 
     expect(calls).to.equal(1);
   });
+
+  test("sends out a notification containing the cleared line count when lines are cleared", () => {
+    const board = new Board(2, 6);
+
+    let calledWithArg = null;
+    board.onClearLine = (lineCount) => calledWithArg = lineCount;
+
+    board.drop(TestingTetromino.O_SHAPE);
+    fallToBottom(board);
+
+    expect(calledWithArg).to.equal(2);
+  });
 });

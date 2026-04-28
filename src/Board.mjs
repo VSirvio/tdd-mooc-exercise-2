@@ -80,13 +80,15 @@ export class Board {
 
         this.#currentBlockLocation = undefined;
 
+        let numOfClearedLines = 0;
         for (let i = 0; i < this.getHeight() - 1; ++i) {
           if (this.#gameArea[i].every(ch => ch !== '.')) {
             this.#gameArea.splice(i, 1);
             this.#gameArea.unshift(['#', ...Array(this.getWidth() - 2).fill('.'), '#']);
-            this.onClearLine();
+            ++numOfClearedLines;
           }
         }
+        this.onClearLine(numOfClearedLines);
       } else {
         this.#currentBlockLocation = newLocation;
       }
