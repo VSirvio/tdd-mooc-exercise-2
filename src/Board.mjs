@@ -34,6 +34,10 @@ export class Board {
     return this.#gameArea.length;
   }
 
+  cellAt(row, column) {
+    return this.toString().split("\n").at(row).at(column);
+  }
+
   toString() {
     if (this.#currentBlockLocation === undefined) {
       return stringFrom2DArray(withoutBorders(this.#gameArea));
