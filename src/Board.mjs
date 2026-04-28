@@ -49,9 +49,9 @@ export class Board {
       return this.#screenContent;
     }
 
-    this.#screenContent = withoutBorders(this.#gameArea);
-
-    if (this.#currentBlockLocation !== undefined) {
+    if (this.#currentBlockLocation === undefined) {
+      this.#screenContent = withoutBorders(this.#gameArea);
+    } else {
       this.#screenContent = withoutBorders(composeOver(
         this.#currentBlock.to2DArray(),
         this.#gameArea,
