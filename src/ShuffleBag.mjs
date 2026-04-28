@@ -7,6 +7,8 @@ export class ShuffleBag {
   }
 
   next() {
-    return this.values[this.currentIndex++];
+    const currentIndex = this.currentIndex;
+    this.currentIndex = (this.currentIndex + 1) % this.values.length;
+    return this.values[currentIndex];
   }
 }

@@ -17,4 +17,16 @@ describe("Shuffle bag", () => {
     }
     expect(pulledOut).to.have.members(values);
   });
+
+  test("pulls out its values again when already pulled out once", () => {
+    const values = [1221, 72, 0];
+    const shuffleBag = new ShuffleBag(values);
+    for (let j = 0; j < 2; ++j) {
+      const pulledOut = [];
+      for (let i = 0; i < values.length; ++i) {
+        pulledOut.push(shuffleBag.next());
+      }
+      expect(pulledOut).to.have.members(values);
+    }
+  });
 });
