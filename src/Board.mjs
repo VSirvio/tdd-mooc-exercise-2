@@ -44,17 +44,17 @@ export class Board {
   }
 
   #getScreenContent() {
-    if (this.#currentBlockLocation === undefined) {
-      return withoutBorders(this.#gameArea);
+    let screenContent = withoutBorders(this.#gameArea);
+
+    if (this.#currentBlockLocation !== undefined) {
+      screenContent = withoutBorders(composeOver(
+        this.#currentBlock.to2DArray(),
+        this.#gameArea,
+        this.#currentBlockLocation,
+      ));
     }
 
-    const screenContent = composeOver(
-      this.#currentBlock.to2DArray(),
-      this.#gameArea,
-      this.#currentBlockLocation,
-    );
-
-    return withoutBorders(screenContent);
+    return screenContent;
   }
 
   drop(block) {
