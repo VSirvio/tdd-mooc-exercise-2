@@ -35,7 +35,7 @@ export class Board {
   }
 
   cellAt(row, column) {
-    return this.toString().split("\n").at(row).at(column);
+    return this.#getScreenContent().at(row).at(column);
   }
 
   toString() {
