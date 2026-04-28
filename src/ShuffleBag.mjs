@@ -1,9 +1,11 @@
+import { duplicateOf } from "./utils.mjs";
+
 export class ShuffleBag {
   values;
   currentIndex = 0;
 
   constructor(values) {
-    this.values = values;
+    this.values = duplicateOf(values);
   }
 
   next() {
