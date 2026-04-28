@@ -12,6 +12,7 @@ export class Board {
   #currentBlock;
   #currentBlockLocation;
   #gameArea;
+  #screenContent;
   #screenContentChanged = true;
   onClearLine = () => {};
 
@@ -44,17 +45,23 @@ export class Board {
   }
 
   #getScreenContent() {
-    let screenContent = withoutBorders(this.#gameArea);
+    if (!this.#screenContentChanged) {
+      return this.#screenContent;
+    }
+
+    this.#screenContent = withoutBorders(this.#gameArea);
 
     if (this.#currentBlockLocation !== undefined) {
-      screenContent = withoutBorders(composeOver(
+      this.#screenContent = withoutBorders(composeOver(
         this.#currentBlock.to2DArray(),
         this.#gameArea,
         this.#currentBlockLocation,
       ));
     }
 
-    return screenContent;
+    this.#screenContentChanged = false;
+
+    return this.#screenContent;
   }
 
   drop(block) {
