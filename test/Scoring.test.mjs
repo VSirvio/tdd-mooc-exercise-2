@@ -119,4 +119,16 @@ describe("The board", () => {
 
     expect(calledWithArg).to.equal(2);
   });
+
+  test("does not send out a notification when no lines are cleared", () => {
+    const board = new Board(10, 6);
+
+    let calls = 0;
+    board.onClearLine = () => ++calls;
+
+    board.drop(TestingTetromino.T_SHAPE);
+    fallToBottom(board);
+
+    expect(calls).to.equal(0);
+  })
 });

@@ -88,7 +88,9 @@ export class Board {
             ++numOfClearedLines;
           }
         }
-        this.onClearLine(numOfClearedLines);
+        if (numOfClearedLines > 0) {
+          this.onClearLine(numOfClearedLines);
+        }
       } else {
         this.#currentBlockLocation = newLocation;
       }
