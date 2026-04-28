@@ -39,8 +39,12 @@ export class Board {
   }
 
   toString() {
+    return stringFrom2DArray(this.#getScreenContent());
+  }
+
+  #getScreenContent() {
     if (this.#currentBlockLocation === undefined) {
-      return stringFrom2DArray(withoutBorders(this.#gameArea));
+      return withoutBorders(this.#gameArea);
     }
 
     const screenContent = composeOver(
@@ -49,7 +53,7 @@ export class Board {
       this.#currentBlockLocation,
     );
 
-    return stringFrom2DArray(withoutBorders(screenContent));
+    return withoutBorders(screenContent);
   }
 
   drop(block) {
