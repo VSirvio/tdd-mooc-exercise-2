@@ -12,6 +12,7 @@ export class Board {
   #currentBlock;
   #currentBlockLocation;
   #gameArea;
+  #screenContentChanged = true;
   onClearLine = () => {};
 
   constructor(width, height) {
@@ -61,6 +62,8 @@ export class Board {
       throw Error('already falling');
     }
 
+    this.#screenContentChanged = true;
+
     let blockObject = block;
     if (typeof block === 'string') {
       blockObject = new SingleBlock(block);
@@ -77,6 +80,8 @@ export class Board {
 
   tick() {
     if (this.#currentBlockLocation) {
+      this.#screenContentChanged = true;
+
       const newLocation = this.#currentBlockLocation.movedBy(0, 1);
 
       if (this.#overlaps(this.#currentBlock, newLocation)) {
@@ -125,6 +130,8 @@ export class Board {
   }
 
   #move(dx, dy) {
+    this.#screenContentChanged = true;
+
     const newLocation = this.#currentBlockLocation.movedBy(dx, dy);
     if (!this.#overlaps(this.#currentBlock, newLocation)) {
       this.#currentBlockLocation = newLocation;
@@ -144,6 +151,8 @@ export class Board {
   }
 
   #rotate(direction) {
+    this.#screenContentChanged = true;
+
     const rotatedBlock = direction === 'right' ?
       this.#currentBlock.rotateRight() :
       this.#currentBlock.rotateLeft();
